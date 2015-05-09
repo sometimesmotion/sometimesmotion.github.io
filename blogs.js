@@ -1,4 +1,4 @@
-$('body').append('<h2>It is working!</h2>');
+$('h1').text('Running...');
 var blogs = [
      {"title":"Web Literacy and #CritLib",
      "date":"05/05/15",
