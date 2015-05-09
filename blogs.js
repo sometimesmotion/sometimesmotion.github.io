@@ -21,7 +21,7 @@ var i;
 for(i = 0; i < blogs.length; i++) {
      output += '<li><a href="'+blogs[i].URL+'" target="_blank">'+blogs[i].date+blogs[i].title+'</a></li>';
 }
-$('#archiveList').append(out);
+$('#archiveList').append(output);
 
 testRun();
 } //end jsonRun()
