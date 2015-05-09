@@ -1,14 +1,14 @@
 $(document).ready(function(){
      
 var blogs = [
-{"title":"Web Literacy and #CritLib",
+     {"title":"Web Literacy and #CritLib",
      "date":"05/05/15",
      "URL":"http://sometimesmotion.net/critlib-webliteracy.html"},
-  
-    {"title":"Second Blog", "date":"05/15/15",
+     
+     {"title":"Second Blog", "date":"05/15/15",
      "URL":"http://sometimesmotion.net/critlib-webliteracy.html"},
-  
-    {"title":"Third Blog", "date":"05/21/25",
+     
+     {"title":"Third Blog", "date":"05/21/25",
      "URL":"http://sometimesmotion.net/critlib-webliteracy.html"}
 ];
 
