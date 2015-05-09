@@ -11,7 +11,13 @@ var blogs = [
     {"title":"Third Blog", "date":"05/21/25",
      "URL":"http://sometimesmotion.net/critlib-webliteracy.html"}
 ];
-//$('#archive ul').prepend("hello world");
-$('#archive ul').append('<li>'+blogs[0].date+' - <a href="'+blogs[0].URL+'" target="_blank">'+blogs[0].title+'</a>');
+
+//Loop through array and post to archive list  
+var out = ""; 
+var i;
+for(i = 0; i < blogs.length; i++) {
+   out += '<li>'+blogs[i].date+' - <a href="'+blogs[i].URL+'" target="_blank">'+blogs[i].title+'</a>';
+}
+$('#archive ul').append(out);
      
 });
