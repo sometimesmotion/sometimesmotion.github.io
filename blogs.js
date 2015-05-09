@@ -1,5 +1,3 @@
-$(document).ready(function(){
-     
 var blogs = [
      {"title":"Web Literacy and #CritLib",
      "date":"05/05/15",
@@ -19,5 +17,3 @@ for(i = 0; i < blogs.length; i++) {
    out += '<li>'+blogs[i].date+' - <a href="'+blogs[i].URL+'" target="_blank">'+blogs[i].title+'</a></li>';
 }
 $('#archive ul').append(out);
-     
-});
