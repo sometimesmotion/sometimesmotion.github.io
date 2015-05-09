@@ -1,0 +1,2 @@
+# sometimesmotion.github.io
+Blog
