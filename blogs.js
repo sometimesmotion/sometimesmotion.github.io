@@ -17,4 +17,4 @@ for(i = 0; i < blogs.length; i++) {
    out += '<li>'+blogs[i].date+' - <a href="'+blogs[i].URL+'" target="_blank">'+blogs[i].title+'</a></li>';
 }
 $('#archive ul').append(out);
-$('body').append('<h2>It's working!</h2>');
+$('body').append('<h2>It\'s working!</h2>');
