@@ -1,9 +1,8 @@
-$(document).ready(function(){
-     function testRun() {
-          $('h1').text('Running...');
-     }//end testRun()
-     
-     function jsonRun() {
+function testRun() {
+     $('h1').text('Running...');
+}//end testRun()
+
+function jsonRun() {
 var blogs = [
      {"title":"Web Literacy and #CritLib",
      "date":"05/05/15",
@@ -16,13 +15,13 @@ var blogs = [
      "URL":"http://sometimesmotion.net/critlib-webliteracy.html"}
 ];
 
-//Loop through array and post to archive list  
-var out = ""; 
+//Loop through array and post to archive list
+var output = "";
 var i;
 for(i = 0; i < blogs.length; i++) {
-   out += '<li>'+blogs[i].date+' - <a href="'+blogs[i].URL+'" target="_blank">'+blogs[i].title+'</a></li>';
+     output += '<li><a href="'+blogs[i].URL+'" target="_blank">'+blogs[i].date+blogs[i].title+'</a></li>';
 }
-$('#archive ul').append(out);
-     } //end jsonRun()
-     
-});
+$('#archiveList').append(out);
+
+testRun();
+} //end jsonRun()
