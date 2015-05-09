@@ -1,4 +1,9 @@
-$('h1').text('Running...');
+$(document).ready(function(){
+     function testRun() {
+          $('h1').text('Running...');
+     }//end testRun()
+     
+     function jsonRun() {
 var blogs = [
      {"title":"Web Literacy and #CritLib",
      "date":"05/05/15",
@@ -18,3 +23,6 @@ for(i = 0; i < blogs.length; i++) {
    out += '<li>'+blogs[i].date+' - <a href="'+blogs[i].URL+'" target="_blank">'+blogs[i].title+'</a></li>';
 }
 $('#archive ul').append(out);
+     } //end jsonRun()
+     
+});
