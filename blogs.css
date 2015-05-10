@@ -6,6 +6,7 @@ body {
   font-size: 1.25em !important;
   color: #2c3e50;
   margin-top: 3em;
+  padding: 0;
 }
 
 .navbar {
@@ -30,17 +31,19 @@ h1, h2, h3 {
 .banner {
   margin: 0 auto;
   padding: 0;
-  background: #333;
 }
 
 .banner img {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   width: 100%;
 }
 
 #content, .container{
   max-width: 750px;
+}
+
+#content {
+  padding: 1em;
 }
 
 li {
