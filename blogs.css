@@ -33,7 +33,8 @@ h1, h2, h3 {
 }
 
 .banner img {
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
   width: 100%;
 }
 
