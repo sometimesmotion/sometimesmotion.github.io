@@ -57,7 +57,6 @@ a {
 }
 
 .toTopNav {
-  border: 1px solid rgba(0, 0, 0, 0.7);
   color: rgba(0, 0, 0, 0.7);
   font-size: 2em;
   width: 40px;
@@ -69,7 +68,7 @@ a {
   right: 3%;
   top: 80%;
   border-radius: 20px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
   z-index: 100;
   display: none;
 }
