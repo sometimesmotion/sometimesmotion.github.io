@@ -371,7 +371,7 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
   theme = theme.toLowerCase();
 
   // Stylesheets
-  var linkEl = document.createElement('link');
+  /*var linkEl = document.createElement('link');
   linkEl.href = originBase + '/themes/'+theme+'.min.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
@@ -385,7 +385,7 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
   linkEl.href = originBase + '/themes/bootstrap-responsive.min.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
-
+*/
   //////////////////////////////////////////////////////////////////////
   //
   // <body> stuff
