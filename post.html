@@ -119,7 +119,7 @@
 <!-- End Piwik Code -->
 
 
-<script src="/strapdown.js"></script>
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
 
 <script type="text/javascript">
     $('#headline').wrap("<a href='index.html' title='Sm Home'>");
@@ -140,9 +140,21 @@ function postsData(blogs) {
   }
   $('#archiveList').append(output);
 }
+
+
+function otherData(links) {
+  var output = "";
+  var i;
+  for(i = 0; i<links.length; i++) {
+    output += '<li><a href="'+links[i].url+'" target="_blank" title="' + links[i].title + '">'+links[i].text+'</a></li>';
+  }
+  $('#otherList').append(output);
+}
+
 </script>
 
 <script src="posts.js"></script>
+<script src="otherLinks.js"></script>
 
 </body>
 </html>
