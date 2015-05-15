@@ -9,7 +9,7 @@
 * comments
 * port to other repo
 
-## Blogging Framework
+## A JS-based Blogging Framework
 
 This project is intended as an easy way to implement a blog using Github Pages. It is purely JavaScript-based, with some JSON files to create dynamically populated menus. It also incorporates Bootstrap & the Bootswatch Flatly theme to allow you to have responsive pages and strapdown.js to use markdown to write your posts. 
 
