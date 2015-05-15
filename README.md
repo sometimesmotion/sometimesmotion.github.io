@@ -7,8 +7,8 @@ This project is intended as an easy way to implement a blog using Github Pages. 
 The idea is pretty simple- there is a JSON file that allows the navigation menu for recent posts and such to be dynamically generated for each page (much like a PHP include). There's no need to code a separate navigation menu for each page- as long as the JSON file gets updated, those links will automatically appear in the header menu. 
 
 ### Two things to keep in mind- 
-
 * update the JSON file when you add a new post. It's pretty simple even if you don't know JSON- just follow the format of the existing entries. Cut and paste a previous entry and enter in the new data.
+
 * if you're using the markdown option, all markdown needs to appear within the <xmp> tags. If you create a bunch of content outside of those, it may mess up the page rendering. 
 
 That's about it. It's pretty simple. 
