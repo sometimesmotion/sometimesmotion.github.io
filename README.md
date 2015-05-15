@@ -17,7 +17,7 @@ That's about it. It's pretty simple.
 
 This work is free to use with an MIT license. I'd appreciate it if you let me know that you're using it and that you give me some feedback, but that's not necessary. I'm certainly no programming whiz- like I said, I created this to be a simpler way for me to write blogs than Jekyll and that's really not all that complex. 
 
-### MIT License info:
+#### MIT License info:
 
 Copyright (c) 2015 Tim Miller
 
