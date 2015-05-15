@@ -9,7 +9,7 @@ The idea is pretty simple- there is a JSON file that allows the navigation menu 
 ### Two things to keep in mind- 
 * update the JSON file when you add a new post. It's pretty simple even if you don't know JSON- just follow the format of the existing entries. Cut and paste a previous entry and enter in the new data.
 
-* if you're using the markdown option, all markdown needs to appear within the <xmp> tags. If you create a bunch of content outside of those, it may mess up the page rendering. 
+* if you're using the markdown option, all markdown needs to appear within the &lt;xmp&gt; tags. If you create a bunch of content outside of those, it may mess up the page rendering. 
 
 That's about it. It's pretty simple. 
 
