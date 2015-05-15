@@ -29,7 +29,7 @@ function navInsert() {
  //add other drop-down
  $('.navbar-right').prepend('<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Other things <span class="caret"></span></a><ul class="dropdown-menu" id="otherList" aria-labelledby="other"></li>');
  //add items to other drop-down -- ****delete when autopopulating****
- $('#otherList').prepend('<li><a href="#">Projects</a></li><li><a href="#">Bike Rides</a></li><li><a href="#">Instruction</a></li><li><a href="#">Business Card</a></li>');
+ //$('#otherList').prepend('<li><a href="#">Projects</a></li><li><a href="#">Bike Rides</a></li><li><a href="#">Instruction</a></li><li><a href="#">Business Card</a></li>');
 
 }//end navInsert()
 
