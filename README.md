@@ -1,6 +1,6 @@
 # sometimesmotion.github.io
 
-## [work in progress - do not download]
+## [though this project is working, it is still a work in progress - download at your own risk]
 
 ### fixes & features to improve on:
 * piwik
