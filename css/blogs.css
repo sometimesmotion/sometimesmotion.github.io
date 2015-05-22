@@ -43,11 +43,8 @@ h1, h2, h3 {
   width: 100%;
 }
 
-#content, .container{
+.container {
   max-width: 850px;
-}
-
-#content {
   padding: 1em;
 }
 
