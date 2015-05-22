@@ -79,15 +79,6 @@ a {
   display: none;
 }
 
-.toTopNav:hover {
-  background: rgba(44, 62, 80,0.9);
-  color: #fff;
-}
-
-.toTopNav a:hover {
-}
-
-
 .hidden {
   position:absolute;
   left:-10000px;
