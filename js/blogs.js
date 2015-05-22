@@ -72,7 +72,7 @@ function postsData(blogs) {
 }
 
 
-function otherData(links) {
+function linksData(links) {
   var output = "";
   var i;
   for(i = 0; i<links.length; i++) {
