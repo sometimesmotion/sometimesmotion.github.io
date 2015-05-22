@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 function navInsert() {
 
  //add new nav element w/ class navbar
@@ -59,6 +61,7 @@ function scrollToTop() {
 }
 
 
+
 function postsData(blogs) {
   var output = "";
   var i;
@@ -78,3 +81,5 @@ function otherData(links) {
   $('#otherList').append(output);
 }
 
+
+}); //end document ready function
