@@ -9,13 +9,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
 <script src="js/blogs.js"></script>
+<script src="js/posts.js"></script>
+<script src="js/otherLinks.js"></script>
 
   <meta charset="utf-8">
   <title>JS-based Blog Framework</title>
 </head>
 <body>
   <div class="container-fluid banner"><img src="https://farm9.staticflickr.com/8756/17196819790_dcba7e800c_o.png" alt="Humboldt State Hour of Code 2014"></div>
-  <pre id="marked" class="container">
+  
+  <div class="marked container"><!--this content is hidden and autoreplaced w/ parsed output see blogs.js-->
   
   ## Markdown
   
@@ -23,9 +26,7 @@
   
   [add cheatsheet code here]
   
-  </pre><!--/#marked-->
-  
-  <div id="mdOutput" class="container"></div>
+  </div><!--/.marked-->
 
   <!--Add in a Kudos widget: https://github.com/masukomi/kudos-->
   <!--Add in commenting widget-->
@@ -56,42 +57,14 @@
 -->
 
 <script type="text/javascript">
+//Run all functions from blogs.js, otherLinks.js and posts.js
   navInsert(); //insert navbar html
   ssInsert(); //insert stylesheets to load after strapdown.js
   scrollToTop(); //scroll widget
+  postsData(); //autopopulate archive dropdown menu
+  otherData(); //autopopulate external links dropdown menu
+  parseMd(); //parse all markdown elements and render
 </script>
-
-<script>
-function postsData(blogs) {
-  var output = "";
-  var i;
-  for(i = 0; i<blogs.length; i++) {
-    output += '<li><a href="'+blogs[i].url+'" target="_blank">'+blogs[i].date+' - '+blogs[i].title+'</a></li>';
-  }
-  $('#archiveList').append(output);
-}
-
-
-function otherData(links) {
-  var output = "";
-  var i;
-  for(i = 0; i<links.length; i++) {
-    output += '<li><a href="'+links[i].url+'" target="_blank" title="' + links[i].title + '">'+links[i].text+'</a></li>';
-  }
-  $('#otherList').append(output);
-}
-
-
-    var text = $('#marked').html();
-    //console.log(text);
-  var mdText = marked(text);
-    //console.log(text);
-$('#mdOutput').html(mdText);
-
-</script>
-
-<script src="js/posts.js"></script>
-<script src="js/otherLinks.js"></script>
 
 </body>
 </html>
