@@ -35,4 +35,4 @@ postsData([
 }
 ])
 
-
+console.log("postsData was read");
