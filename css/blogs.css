@@ -9,7 +9,7 @@ body {
   padding: 0;
 }
 
-#marked {
+.marked {
   display: none;
 }
 
