@@ -78,8 +78,11 @@ a {
 }
 
 .toTopNav:hover {
-  background: rgba(0,0,0,0.2);
-  font-color: #FFF;
+  background: rgba(0,0,0,0.1);
+}
+
+.toTopNav a:hover {
+  color: #fff;
 }
 
 
