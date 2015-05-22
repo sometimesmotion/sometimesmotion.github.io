@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
   <link href="css/blogs.css" rel="stylesheet" type="text/css">
   <meta charset="utf-8">
@@ -53,6 +53,8 @@ HTML:
   </div>
 
 <script>
+
+$(document).ready(function(){
   function parseMd() {
 
 $( ".marked" ).each(function( index ) {
@@ -65,6 +67,8 @@ $( ".marked" ).each(function( index ) {
 }
 
 parseMd();
+
+});
 
 </script>
 </body>
