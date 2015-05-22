@@ -7,6 +7,7 @@
 
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js">
 <script src="js/blogs.js"></script>
 
   <meta charset="utf-8">
@@ -14,7 +15,7 @@
 </head>
 <body>
   <div class="container-fluid banner"><img src="https://farm9.staticflickr.com/8756/17196819790_dcba7e800c_o.png" alt="Humboldt State Hour of Code 2014"></div>
-  <xmp theme="flatly" style="display:none;">
+  <pre id="marked">
 
   # Web Literacy and #CritLib
 
@@ -96,7 +97,8 @@
 
   [Open Wireless Movement](https://openwireless.org/ "Openwireless.org homepage")
 
-  </xmp>
+  </pre><!--/#marked-->
+  <div id="mdOutput"></div>
 
   <!--Add in a Kudos widget: https://github.com/masukomi/kudos-->
   <!--Add in commenting widget-->
@@ -118,12 +120,13 @@
 <noscript><p><img src="http://sometimesmotion.net/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
 
-
+<!--
 <script src="js/strapdown.js"></script>
 
 <script type="text/javascript">
     $('#headline').wrap("<a href='index.html' title='Sm Home'>");
 </script>
+-->
 
 <script type="text/javascript">
   navInsert(); //insert navbar html
@@ -150,6 +153,13 @@ function otherData(links) {
   }
   $('#otherList').append(output);
 }
+
+
+    var text = $('pre#marked').text();
+    //console.log(text);
+  var mdText = marked(text);
+    //console.log(text);
+$('#mdOutput').html(mdText);
 
 </script>
 
