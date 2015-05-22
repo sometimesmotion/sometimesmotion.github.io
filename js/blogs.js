@@ -1,5 +1,3 @@
-$(document).ready(function(){
-
 function navInsert() {
 
  //add new nav element w/ class navbar
@@ -33,11 +31,13 @@ function navInsert() {
 
 }//end navInsert()
 
+
 function ssInsert() {
   //add stylesheets after dynamically loaded strapdown.js sheets
   $('head').append("<link href='https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css' rel='stylesheet' type='text/css'>");
   $('head').append("<link rel='stylesheet' text='text/css' href='css/blogs.css'>");
 }//end ssInsert()
+
 
 function scrollToTop() {
 //Create button to scroll to top of page
@@ -61,8 +61,6 @@ function scrollToTop() {
 }
 
 
-
-
 function parseMd() {
 
 $( ".marked" ).each(function( index ) {
@@ -73,6 +71,3 @@ $( ".marked" ).each(function( index ) {
 });
   
 }
-
-
-}); //end document ready function
