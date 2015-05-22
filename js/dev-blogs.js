@@ -7,5 +7,5 @@ function parseMd() {
     $(this).next('.mdOutput').html(mdText);
   });
 
- console.log('dev-blogs.js updated: '+12:06); 
+ console.log('dev-blogs.js updated: 12:08'); 
 }
