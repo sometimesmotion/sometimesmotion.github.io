@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -13,6 +13,7 @@
   <meta charset="utf-8">
   <title>JS-based Blog Framework</title>
 </head>
+
 <body>
   <div class="container-fluid banner"><img src="https://farm9.staticflickr.com/8756/17196819790_dcba7e800c_o.png" alt="Humboldt State Hour of Code 2014"></div>
   
@@ -30,29 +31,7 @@
   <!--Add in commenting widget-->
 
 <!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="http://sometimesmotion.net/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 2]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="http://sometimesmotion.net/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
-
-<!--
-<script src="js/strapdown.js"></script>
-
-<script type="text/javascript">
-    $('#headline').wrap("<a href='index.html' title='Sm Home'>");
-</script>
--->
 
 
 <!--<script src="js/posts.js"></script>
@@ -61,12 +40,12 @@
 <script type="text/javascript">
   
 //Run all functions from blogs.js, otherLinks.js and posts.js
-  //navInsert(); //insert navbar html
-  //ssInsert(); //insert stylesheets to load after strapdown.js
-  //scrollToTop(); //scroll widget
+  navInsert(); //insert navbar html
+  ssInsert(); //insert stylesheets to load after strapdown.js
+  scrollToTop(); //scroll widget
   //postsData(); //autopopulate archive dropdown menu
   //otherData(); //autopopulate external links dropdown menu
-  //parseMd(); //parse all markdown elements and render
+  parseMd(); //parse all markdown elements and render
 
 </script>
 
