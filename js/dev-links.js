@@ -26,7 +26,6 @@ function linksData() {
 
   for (var i = 0; i < links.length; i++) {
     output += '<li><a href="'+links[i].url+'" target="_blank" title="' + links[i].title + '">'+links[i].text+'</a></li>';
-    $('#linksList').append(output);
   }
-  
+  $('#linksList').append(output);  
 }
