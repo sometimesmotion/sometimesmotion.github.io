@@ -56,17 +56,6 @@
 
 <script type="text/javascript">
 
-function parseMd() {
-
-$( ".marked" ).each(function( index ) {
-  var text = $(this).html();
-  var mdText = marked(text);
-  $(this).after('<div class="mdOutput"></div>');
-  $(this).next('.mdOutput').html(mdText);
-});
-  
-}
-
 //Run all functions from blogs.js, otherLinks.js and posts.js
   navInsert(); //insert navbar html
   ssInsert(); //insert stylesheets to load after strapdown.js
