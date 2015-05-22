@@ -1,37 +1,3 @@
-function navInsert() {
-
- //add new nav element w/ class navbar
- $('body').prepend('<nav class="navbar navbar-default navbar-fixed-top" id="mainNav"></nav>');
- //create container
- $('#mainNav').prepend('<div class="container"></div>');
- //navbar-header
- $('#mainNav .container').prepend('<div class="navbar-header"></div>');
- //navbar-brand
- $('#mainNav .navbar-header').prepend('<a href="#" class="navbar-brand">Sometimes Motion</a>');
- //navbar-toggle ???is this needed???
- $('#mainNav .navbar-header').append('<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>');
-
- //moving on to the collapsing elements
- $('#mainNav .container').append('<div class="navbar-collapse collapse" id="navbar-main"></div>');
- //left-side ul
- $('#mainNav .navbar-collapse').prepend('<ul class="nav navbar-nav" id="leftNav"></ul>');
- //add links to left-side ul
- $('#leftNav').prepend('<li class="active"><a href="#">Blog</a></li>');
- //add archive drop-down
- $('#leftNav').append('<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Archive <span class="caret"></span></a><ul class="dropdown-menu" id="archiveList" aria-labelledby="archive"></ul></li>');
- //add items to archive drop-down
- //$('#archiveList').html('<li><a href="#">5/05/15</a></li>');
-
- //right-side ul
- $('#mainNav .navbar-collapse').append('<ul class="nav navbar-nav navbar-right"></ul>');
- //add other drop-down
- $('.navbar-right').prepend('<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Other things <span class="caret"></span></a><ul class="dropdown-menu" id="otherList" aria-labelledby="other"></li>');
- //add items to other drop-down -- ****delete when autopopulating****
- //$('#otherList').prepend('<li><a href="#">Projects</a></li><li><a href="#">Bike Rides</a></li><li><a href="#">Instruction</a></li><li><a href="#">Business Card</a></li>');
-
-}//end navInsert()
-
-
 function scrollToTop() {
 //Create button to scroll to top of page
   $('body').append('<div class="toTopNav ion-ios-arrow-up"><span class="hidden">Back to Top</span></div>');
