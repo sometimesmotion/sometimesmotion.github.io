@@ -79,10 +79,10 @@ a {
 
 .toTopNav:hover {
   background: rgba(0,0,0,0.1);
+  color: #fff;
 }
 
 .toTopNav a:hover {
-  color: #fff;
 }
 
 
