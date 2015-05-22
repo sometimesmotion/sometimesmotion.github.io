@@ -1,4 +1,4 @@
-otherData([
+linksData([
 {
 "text": "Projects",
 "url": "http://jsbin.com/cihibo/",
