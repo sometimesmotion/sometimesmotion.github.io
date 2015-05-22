@@ -59,3 +59,35 @@ function scrollToTop() {
   });
 
 }
+
+
+function postsData(blogs) {
+  var output = "";
+  var i;
+  for(i = 0; i<blogs.length; i++) {
+    output += '<li><a href="'+blogs[i].url+'" target="_blank">'+blogs[i].date+' - '+blogs[i].title+'</a></li>';
+  }
+  $('#archiveList').append(output);
+}
+
+
+function otherData(links) {
+  var output = "";
+  var i;
+  for(i = 0; i<links.length; i++) {
+    output += '<li><a href="'+links[i].url+'" target="_blank" title="' + links[i].title + '">'+links[i].text+'</a></li>';
+  }
+  $('#otherList').append(output);
+}
+
+function parseMd() {
+
+$( ".marked" ).each(function( index ) {
+  var text = $(this).html();
+  var mdText = marked(text);
+  $(this).after('<div class="mdOutput"></div>');
+  $(this).next('.mdOutput').html(mdText);
+});
+  
+}
+
