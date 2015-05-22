@@ -25,3 +25,13 @@ postsData([
 "date":"5/5/15"
 }
 ])
+
+
+function postsData(blogs) {
+  var output = "";
+  var i;
+  for(i = 0; i<blogs.length; i++) {
+    output += '<li><a href="'+blogs[i].url+'" target="_blank">'+blogs[i].date+' - '+blogs[i].title+'</a></li>';
+  }
+  $('#archiveList').append(output);
+}
