@@ -67,55 +67,55 @@
     
   <div class="marked">
     
-    ## A JS-Based Blogging Framework for Github
+## A JS-Based Blogging Framework for Github
     
-    The purpose of this project is to provide a simple JavaScript solution to creating a blog with static pages. The only dynamic portion of the project is that you can include links to your archives and other pages using JSON file includes.
-    
-    ### Writing a post
-    
-    This is a really simple setup. You also have options. The basic way to create a new post, however, is to create a new file by copying &amp; pasting the template file. You can add new content in HTML or use markdown by writing within a div (or similar element) with the class `marked`.
-    
-    #### Structure
-    
-    There are options. You can easily create something similar by simply saving each new post as `index.html` and then renaming the file when a new post is written (which will be taking on the `index.html` moniker).
-    However, if you are looking for the generic blog setup where the most current post 
-    shows up at the top of the main page, you'll have to wait for that functionality to be added. 
-    
-    ### Markdown
-    
-    Thanks to [marked.js](https://github.com/chjj/marked) you can use markdown instead of writing HTML. This helps you to focus
-    on your content. However, if you don't like markdown or don't know it yet, you can use HTML without any restrictions. 
-    
-    To use the markdown feature, it is very simple: 
-      * Wrap your markdown in a `&lt;div>` (or similar element) and give it the class "marked".
-      * Optional: if you want to use markdown within an HTML element, warp it in a `&lt;span>` (I have included a script that strips the `&lt;p>` tag when you use a `&lt;span>`
-      
-    To learn more about writing in markdown, view [Jon Schlinkert's](https://gist.github.com/jonschlinkert) [cheatsheet](https://gist.github.com/jonschlinkert/5854601) 
-   
-    ### JS Includes
-   
-    To use the includes, you may want to learn a little about JSON (if you don't already). You don't need to be an expert and can very likely get away without learning it all, but why not learn something new? Check out these [JSON](https://www.json.com/) and [JSON Array](https://www.json.com/json-array) pages.
-   
-    Data for your links is stored in JSON arrays and then linked to the page template, so that with each new page you create, the links will automatically be included. However, this is an extra step- you'll need to update the JSON files when you write a new post.
-   
-    It's pretty simple: 
-      * Open the posts.js file for editing
-      * Copy the last entry- it should look something like this:
-        ```
-        {
-          "title": "JSON Overview",
-          "url": "https://www.json.com",
-          "date":"5/5/15"
-        }
-        ```
-      * Add a comma after this last curly brace
-      * Paste the copy on a new line after the last curly brace and comma
-      * Change the info to reflect your new post
-      * Commit (save) the changes to the posts.js file
-      
-    The process for creating and updating the external links is the same except that you'll be dealing with the links.js file instead. 
-    
-    If you plan to hack this project, you can certainly include more metadata- just be sure to use proper JSON syntax.
+The purpose of this project is to provide a simple JavaScript solution to creating a blog with static pages. The only dynamic portion of the project is that you can include links to your archives and other pages using JSON file includes.
+
+### Writing a post
+
+This is a really simple setup. You also have options. The basic way to create a new post, however, is to create a new file by copying &amp; pasting the template file. You can add new content in HTML or use markdown by writing within a div (or similar element) with the class `marked`.
+
+#### Structure
+
+There are options. You can easily create something similar by simply saving each new post as `index.html` and then renaming the file when a new post is written (which will be taking on the `index.html` moniker).
+However, if you are looking for the generic blog setup where the most current post 
+shows up at the top of the main page, you'll have to wait for that functionality to be added. 
+
+### Markdown
+
+Thanks to [marked.js](https://github.com/chjj/marked) you can use markdown instead of writing HTML. This helps you to focus
+on your content. However, if you don't like markdown or don't know it yet, you can use HTML without any restrictions. 
+
+To use the markdown feature, it is very simple: 
+  * Wrap your markdown in a `&lt;div>` (or similar element) and give it the class "marked".
+  * Optional: if you want to use markdown within an HTML element, warp it in a `&lt;span>` (I have included a script that strips the `&lt;p>` tag when you use a `&lt;span>`
+  
+To learn more about writing in markdown, view [Jon Schlinkert's](https://gist.github.com/jonschlinkert) [cheatsheet](https://gist.github.com/jonschlinkert/5854601) 
+
+### JS Includes
+
+To use the includes, you may want to learn a little about JSON (if you don't already). You don't need to be an expert and can very likely get away without learning it all, but why not learn something new? Check out these [JSON](https://www.json.com/) and [JSON Array](https://www.json.com/json-array) pages.
+
+Data for your links is stored in JSON arrays and then linked to the page template, so that with each new page you create, the links will automatically be included. However, this is an extra step- you'll need to update the JSON files when you write a new post.
+
+It's pretty simple: 
+  * Open the posts.js file for editing
+  * Copy the last entry- it should look something like this:
+    ```
+    {
+      "title": "JSON Overview",
+      "url": "https://www.json.com",
+      "date":"5/5/15"
+    }
+    ```
+  * Add a comma after this last curly brace
+  * Paste the copy on a new line after the last curly brace and comma
+  * Change the info to reflect your new post
+  * Commit (save) the changes to the posts.js file
+  
+The process for creating and updating the external links is the same except that you'll be dealing with the links.js file instead. 
+
+If you plan to hack this project, you can certainly include more metadata- just be sure to use proper JSON syntax.
     
     
    
