@@ -1,6 +1,4 @@
 function navInsert() {
-//delete current navbar
- $('#headline').parent().parent().parent().parent().remove();
 
  //add new nav element w/ class navbar
  $('body').prepend('<nav class="navbar navbar-default navbar-fixed-top" id="mainNav"></nav>');
