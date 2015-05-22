@@ -79,7 +79,7 @@ function otherData(links) {
 }
 
 
-function parseMd() {
+//function parseMd() {
 
 $( ".marked" ).each(function( index ) {
   var text = $(this).html();
@@ -88,5 +88,5 @@ $( ".marked" ).each(function( index ) {
   $(this).next('.mdOutput').html(mdText);
 });
   
-}
+//}
 
