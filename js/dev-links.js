@@ -22,11 +22,8 @@ var links = [
 ];
 
 function linksData() {
-  var output;
 
   for (var i = 0; i < links.length; i++) {
-    //output += '<li><a href="'+links[i].url+'" target="_blank" title="' + links[i].title + '">'+links[i].text+'</a></li>';
     $('#linksList').append('<li><a href="'+links[i].url+'" target="_blank" title="' + links[i].title + '">'+links[i].text+'</a></li>');
-  }
-  //$('#linksList').append(output);  
+  } 
 }
