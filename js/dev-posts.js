@@ -4,7 +4,7 @@ function postsData() {
 
 var obj = JSON.parse(text);
 
-$('#display').append(obj.name);
+$('#archiveList').append('<li>'+obj.name+'</li>');
 
   
 }
