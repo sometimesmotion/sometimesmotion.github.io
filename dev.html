@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href='https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css' rel='stylesheet' type='text/css'>
-<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-<link href="css/blogs.css" rel="stylesheet" type="text/css">
-
-<script src="https://code.jquery.com/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
-<!--<script src="js/blogs.js"></script>-->
-
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
   <meta charset="utf-8">
-  <title>JS-based Blog Framework</title>
+  <title>JS Bin</title>
 </head>
-
 <body>
   
-  <div class="container-fluid banner"><img src="https://farm9.staticflickr.com/8756/17196819790_dcba7e800c_o.png" alt="Humboldt State Hour of Code 2014"></div>
+ <div class="marked">
+
+   <span class="red">## Headings</span>
+
+Headings from `h1` through `h6` are constructed with a `#` for each level:
+
+``` markdown
+# h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+```
+  </div>
   
-  <div class="container">
-    
-    <!--this content is hidden and autoreplaced w/ parsed output see blogs.js-->
-    <div class="marked">
-    
-    ## Markdown
-    
-    Thanks to [marked.js](https://github.com/chjj/marked), you can focus on your writing rather than your coding. The cheatsheet and list of supported markdown features can be viewed in the list below:
-    
-    [add cheatsheet code here]
-    
-    </div><!--/.marked-->
-    
+ <div class="marked">
+
+Renders to:
+
+# h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+   </div>
+  
+ <div class="marked">
+
+HTML:
+
+``` html
+<h1>h1 Heading</h1>
+<h2>h2 Heading</h2>
+<h3>h3 Heading</h3>
+<h4>h4 Heading</h4>
+<h5>h5 Heading</h5>
+<h6>h6 Heading</h6>
+```
+   
   </div>
 
 <script>
-function parseMd() {
+  function parseMd() {
 
 $( ".marked" ).each(function( index ) {
   var text = $(this).html();
@@ -46,8 +62,9 @@ $( ".marked" ).each(function( index ) {
 });
   
 }
-  parseMd();
-</script>
 
+parseMd();
+
+</script>
 </body>
 </html>
