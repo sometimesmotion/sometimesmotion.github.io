@@ -71,3 +71,5 @@ $( ".marked" ).each(function( index ) {
 });
   
 }
+
+console.log('blogs.js was read');
