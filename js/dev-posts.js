@@ -1,4 +1,4 @@
-var text = '{"title":"John Johnson","URL":"http://sometimesmotion.net/critlib-webliteracy.html","phone":"555 1234567"}';
+var text = '{"title":"Web Literacy and #CritLib","URL":"http://sometimesmotion.net/critlib-webliteracy.html","date":"5/5/15"}';
 
 function postsData() {
 
