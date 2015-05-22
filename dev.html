@@ -10,7 +10,7 @@
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
-<script src="js/blogs.js"></script>
+<!--<script src="js/blogs.js"></script>-->
 
   <meta charset="utf-8">
   <title>JS-based Blog Framework</title>
@@ -23,7 +23,7 @@
   <div class="container">
     
     <!--this content is hidden and autoreplaced w/ parsed output see blogs.js-->
-    <pre class="marked">
+    <div class="marked">
     
     ## Markdown
     
@@ -31,11 +31,21 @@
     
     [add cheatsheet code here]
     
-    </pre><!--/.marked-->
+    </div><!--/.marked-->
     
   </div>
 
 <script>
+function parseMd() {
+
+$( ".marked" ).each(function( index ) {
+  var text = $(this).html();
+  var mdText = marked(text);
+  $(this).after('<div class="mdOutput"></div>');
+  $(this).next('.mdOutput').html(mdText);
+});
+  
+}
   parseMd();
 </script>
 
