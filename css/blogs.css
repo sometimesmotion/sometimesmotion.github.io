@@ -9,6 +9,10 @@ body {
   padding: 0;
 }
 
+.red {
+  color: red;
+}
+
 .marked {
   display: none;
 }
