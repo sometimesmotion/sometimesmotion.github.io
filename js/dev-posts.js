@@ -48,8 +48,8 @@ for (var i = 0; i < blogs.length; i++) {
   
   //next
   if (nextPlace < postsLen) {
-    console.log('show next button');
     var nextPost = blogs[nextPlace].url;
+    console.log('show next button');
     $('#next').show();
     $('#next').attr('href',nextPost);
   }
@@ -58,9 +58,10 @@ for (var i = 0; i < blogs.length; i++) {
   var prevPlace = place - 1;
   console.log('prevPlace: '+prevPlace);
   if (prevPlace >= 0){
-    console.log('show prev button');
     var prevPost = blogs[prevPlace].url;
-    $('#prev').show(); $('#prev').attr('href',prevPost);
+    console.log('show prev button');
+    $('#prev').show(); 
+    $('#prev').attr('href',prevPost);
   }
   
 }
