@@ -51,7 +51,7 @@ for (var i = 0; i < blogs.length; i++) {
     var nextPost = blogs[nextPlace].url;
     //console.log('show next button');
 $('#next').show();
-console.log('next is now shown');
+console.log('can you see next?!');
     $('#next').attr('href',nextPost);
   }
 
