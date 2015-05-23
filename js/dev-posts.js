@@ -19,6 +19,7 @@ var blogs = [
   }
 ];
 $('#next').show();
+console.log('next is now shown');
 function postsData() {
   for (var i = 0; i < blogs.length; i++) {
     $('#archiveList').append('<li><a href="'+blogs[i].url+'">'+blogs[i].title+'</a></li>');
