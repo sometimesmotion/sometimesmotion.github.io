@@ -88,3 +88,7 @@ a {
   list-style-type: none;
   padding-left: 0;
 }
+
+#recent {
+  margin-top: 2em;
+}
