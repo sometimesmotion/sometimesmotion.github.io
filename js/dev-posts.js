@@ -42,27 +42,21 @@ for (var i = 0; i < blogs.length; i++) {
     var place = i;
   }
   var nextPlace = place + 1;
-  //console.log('nextPlace: '+nextPlace);
   var postsLen = blogs.length;
-
-  //console.log('postsLen: '+postsLen);
   
   //next
   if (nextPlace < postsLen) {
     var nextPost = blogs[nextPlace].url;
     $('#next').show();
     $('#next').attr('href',nextPost);
-    console.log('new next url: '+nextPost);
   }
 
   //prev
   var prevPlace = place - 1;
-  //console.log('prevPlace: '+prevPlace);
   if (prevPlace >= 0){
     var prevPost = blogs[prevPlace].url;
     $('#prev').show(); 
     $('#prev').attr('href',prevPost);
-    console.log('new prev url: '+prevPost);
   }
   
 }
