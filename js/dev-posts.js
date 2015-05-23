@@ -18,7 +18,8 @@ var blogs = [
     "category":"privacy"
   }
 ];
-
+$('#next').hide();
+$('#prev').hide();
 function postsData() {
   for (var i = 0; i < blogs.length; i++) {
     $('#archiveList').append('<li><a href="'+blogs[i].url+'">'+blogs[i].title+'</a></li>');
