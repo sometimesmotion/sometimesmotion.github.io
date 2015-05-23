@@ -93,10 +93,6 @@ footer {
   margin-top: 2em;
 }
 
-#next, #prev {
-  display: none;
-}
-
 @media (max-width: 400px) { 
   
   .navbar-brand {
