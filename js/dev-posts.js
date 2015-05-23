@@ -49,7 +49,7 @@ for (var i = 0; i < blogs.length; i++) {
   //next
   if (nextPlace < postsLen) {
     var nextPost = blogs[nextPlace].url;
-    console.log('show next button');
+    //console.log('show next button');
     $('#next').attr('href',nextPost);
   }
 
@@ -59,7 +59,7 @@ for (var i = 0; i < blogs.length; i++) {
   if (prevPlace >= 0){
     var prevPost = blogs[prevPlace].url;
     $('#prev').show(); 
-    console.log('show prev button');
+    //console.log('show prev button');
     $('#prev').attr('href',prevPost);
   }
   
