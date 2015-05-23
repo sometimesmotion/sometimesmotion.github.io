@@ -49,7 +49,6 @@ for (var i = 0; i < blogs.length; i++) {
   //next
   if (nextPlace < postsLen) {
     var nextPost = blogs[nextPlace].url;
-    $('#next').show();
     console.log('show next button');
     $('#next').attr('href',nextPost);
   }
@@ -65,3 +64,5 @@ for (var i = 0; i < blogs.length; i++) {
   }
   
 }
+
+    $('#next').show();
