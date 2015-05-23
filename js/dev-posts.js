@@ -33,6 +33,7 @@ for (var i = 0; i < blogs.length; i++) {
     var place = i;
   }
   var nextPlace = place + 1;
+  console.log('nextPlace: '+nextPlace);
   var postsLen = blogs.length;
 
   //next
@@ -44,6 +45,7 @@ for (var i = 0; i < blogs.length; i++) {
 
   //prev
   var prevPlace = place - 1;
+  console.log('prevPlace: '+prevPlace);
   if (prevPlace >= 0){
   var prevPost = blogs[prevPlace].url;
   $('#prev').show(); $('#prev').attr('href',prevPost);
