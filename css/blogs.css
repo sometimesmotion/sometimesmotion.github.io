@@ -86,3 +86,17 @@ a {
   height:1px;
   overflow:hidden;
 }
+
+#recent {
+  position: absolute;
+  bottom: 1em;
+  color: #000;
+  border: #ccc;
+  border-radius: 1em;
+  background: #F7F7F7;
+  padding: 1em;
+}
+
+#recent li {
+  list-style-type: none;
+}
