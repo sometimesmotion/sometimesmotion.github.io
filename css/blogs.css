@@ -53,9 +53,6 @@ h1, h2, h3 {
   max-width: 850px;
 }
 
-li {
-}
-
 a {
   text-decoration: none;
   color: #16a085;
@@ -87,7 +84,7 @@ a {
   overflow:hidden;
 }
 
-#recent li {
+#recent li, #recent ul {
   list-style-type: none;
+  padding-left: 0;
 }
-
