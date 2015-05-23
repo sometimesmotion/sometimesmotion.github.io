@@ -1,5 +1,3 @@
-$(document).ready(function(){
-  
 var blogs = [ 
   {
     "title" : "Web Literacy and #CritLib",
@@ -68,6 +66,3 @@ for (var i = 0; i < blogs.length; i++) {
   }
   
 }
-
-
-}); //end of document ready function
