@@ -41,10 +41,10 @@ for (var i = 0; i < blogs.length; i++) {
     var place = i;
   }
   var nextPlace = place + 1;
-  console.log('nextPlace: '+nextPlace);
+  //console.log('nextPlace: '+nextPlace);
   var postsLen = blogs.length;
 
-  console.log('postsLen: '+postsLen);
+  //console.log('postsLen: '+postsLen);
   
   //next
   if (nextPlace < postsLen) {
@@ -56,7 +56,7 @@ for (var i = 0; i < blogs.length; i++) {
 
   //prev
   var prevPlace = place - 1;
-  console.log('prevPlace: '+prevPlace);
+  //console.log('prevPlace: '+prevPlace);
   if (prevPlace >= 0){
     var prevPost = blogs[prevPlace].url;
     console.log('show prev button');
