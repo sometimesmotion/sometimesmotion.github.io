@@ -50,9 +50,9 @@ for (var i = 0; i < blogs.length; i++) {
   //next
   if (nextPlace < postsLen) {
     var nextPost = blogs[nextPlace].url;
-    console.log('next url: '+nextPost);
     $('#next').show();
     $('#next').attr('href',nextPost);
+    console.log('new next url: '+nextPost);
   }
 
   //prev
@@ -61,8 +61,8 @@ for (var i = 0; i < blogs.length; i++) {
   if (prevPlace >= 0){
     var prevPost = blogs[prevPlace].url;
     $('#prev').show(); 
-    console.log('prev url: '+prevPost);
     $('#prev').attr('href',prevPost);
+    console.log('new prev url: '+prevPost);
   }
   
 }
