@@ -12,12 +12,13 @@ var blogs = [
 ];
 
 function postsData() {
-
-  //var obj = JSON.parse(blogs);
-
   for (var i = 0; i < blogs.length; i++) {
     $('#archiveList').append('<li><a href="'+blogs[i].url+'">'+blogs[i].title+'</a></li>');
   }
+}
 
-  
+function recentPosts() {
+  for (var i = 0; i < blogs.length; i++) {
+    $('#recent ul').append("<li><a href='"+blogs[i].url+"'>"+blogs[i].title+"</a></li>");
+  }
 }
