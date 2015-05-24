@@ -60,7 +60,7 @@ for (var k = 0; k < blogs.length; k++) {
   //find where the current page sits in list
   var curURL = window.location.href; 
   curURL = curURL.replace(/^[^_]*.io/, '');
-  if (curURL === "") {
+  if (curURL === "/") {
     curURL = 'index.html';
   }
   console.log('curURL: '+curURL);
