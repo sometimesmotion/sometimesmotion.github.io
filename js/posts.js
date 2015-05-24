@@ -7,7 +7,7 @@ var blogs = [
   },
   {
     "title" : "A JS-Based Blogging Framework for Github Pages",
-    "url" : "http://sometimesmotion.github.io/index.html",
+    "url" : "http://sometimesmotion.github.io",
     "date":"5/15/15",
     "category":"blog framework"
   }
@@ -53,6 +53,10 @@ for (var k = 0; k < blogs.length; k++) {
 
   //find where the current page sits in list
   var curURL = window.location.href; 
+  curURL = curURL.replace(/^[^_]*.io/, '');
+  if (curURL === "") {
+    curURL = 'index.html';
+  }
   if(url === curURL){
     var place = k;
   }
