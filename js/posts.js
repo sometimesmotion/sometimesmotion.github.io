@@ -1,39 +1,62 @@
-postsData([
-{
-"title": "HTML Tutorial",
-"url": "http://www.w3schools.com/html/default.asp",
-"date":"5/1/15"
-},
-{
-"title": "CSS Tutorial",
-"url": "http://www.w3schools.com/css/default.asp",
-"date":"5/2/15"
-},
-{
-"title": "JavaScript Tutorial",
-"url": "http://www.w3schools.com/js/default.asp",
-"date":"5/3/15"
-},
-{
-"title": "jQuery Tutorial",
-"url": "http://www.w3schools.com/jquery/default.asp",
-"date":"5/4/15"
-},
-{
-"title": "JSON Tutorial",
-"url": "http://www.w3schools.com/json/default.asp",
-"date":"5/5/15"
-}
-])
-
-function postsData(blogs) {
-  var output = "";
-  var i;
-  for(i = 0; i<blogs.length; i++) {
-    output += '<li><a href="'+blogs[i].url+'" target="_blank">'+blogs[i].date+' - '+blogs[i].title+'</a></li>';
+var blogs = [ 
+  {
+    "title" : "Web Literacy and #CritLib",
+    "url" : "http://sometimesmotion.github.io/posts/critlib-webliteracy.html",
+    "date":"5/5/15",
+    "category":"web literacy"
+  }, 
+  {
+    "title" : "A JS-Based Blogging Framework for Github Pages",
+    "url" : "http://sometimesmotion.github.io/dev.html",
+    "date":"5/15/15",
+    "category":"blog framework"
+  }, 
+  {
+    "title" : "Some third post",
+    "url" : "http://third.com",
+    "date":"5/25/15",
+    "category":"privacy"
   }
-  $('#archiveList').append(output);
+];
+$('#next').hide();
+$('#prev').hide();
+function postsData() {
+  for (var i = 0; i < blogs.length; i++) {
+    $('#archiveList').append('<li><a href="'+blogs[i].url+'">'+blogs[i].title+'</a></li>');
+  }
 }
 
-postsData();
-console.log("postsData was run");
+function recentPosts() {
+  for (var i = 0; i < blogs.length; i++) {
+    $('#recent ul').append("<li><a href='"+blogs[i].url+"'>"+blogs[i].title+"</a></li>");
+  }
+}
+
+
+for (var i = 0; i < blogs.length; i++) {
+  var url = blogs[i].url;
+
+  //find where the current page sits in list
+  var curURL = window.location.href; 
+  if(url === curURL){
+    var place = i;
+  }
+  var nextPlace = place + 1;
+  var postsLen = blogs.length;
+  
+  //next
+  if (nextPlace < postsLen) {
+    var nextPost = blogs[nextPlace].url;
+    $('#next').show();
+    $('#next').attr('href',nextPost);
+  }
+
+  //prev
+  var prevPlace = place - 1;
+  if (prevPlace >= 0){
+    var prevPost = blogs[prevPlace].url;
+    $('#prev').show(); 
+    $('#prev').attr('href',prevPost);
+  }
+  
+}
