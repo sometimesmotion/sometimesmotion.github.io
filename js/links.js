@@ -21,6 +21,20 @@ var links = [
   }
 ];
 
+/*-----------------------------------------------------------------------
+To add new metadata for a link, copy the template from here (the comma on the first line is important)
+and paste it after the last curly brace } in the blogs JSON array above:
+,
+  {
+    "title" : "",
+    "url" : "",
+    "date":",
+    "category":""
+  }
+-----------------------------------------------------------------------*/
+
+
+//Populate the dropdown menu with these links
 function linksData() {
 
   for (var i = 0; i < links.length; i++) {
