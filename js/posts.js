@@ -63,7 +63,7 @@ for (var k = 0; k < blogs.length; k++) {
   if (curURL === "/") {
     curURL = '/index.html';
   }
-  console.log('curURL: '+curURL);
+  
   if(url === curURL){
     var place = k;
   }
