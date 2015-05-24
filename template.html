@@ -58,73 +58,32 @@
     
   <div class="marked">
     
-## A JS-Based Blogging Framework for Github Pages
-    
-The purpose of this project is to provide a simple JavaScript solution to creating a blog with static pages. The only dynamic portion of the project is that you can include links to your archives and other pages using JSON file includes.
+# Heading 
 
-### Writing a post
+Date goes here
 
-This is a really simple setup. You also have options. The basic way to create a new post, however, is to create a new file by copying &amp; pasting the template file. You can add new content in HTML or use markdown by writing within a div (or similar element) with the class `marked`.
+_Start things off with an italicized quote or theme_
 
-### Structure
+> Alternatively, you can start off with a blockquote that sets things apart
 
-There are options. 
+Then you can start writing out a paragraph with a bunch of text. Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
 
-The default procedure is to simply save each new post as `index.html`. This means that the main page shows the most recent article. When it is time to write a new article, rename the file for archiving and create a new post with the name `index.html`. The code snippet for adding a list of recent articles to the bottom of the page will autopopulate with the most recent articles. You could write a new script to pull only those articles that are relevant to the current topic. 
+You could just as easily keep on with another paragraph. Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
 
-For the hackers, the options are almost limitless. If you create a new structure, create a pull request or file an issue so that I can add more options for users. I will be working on a generic blog setup where the most current post shows up at the top of the main page, but you'll have to wait for that functionality to be added (or create it yourself!). 
+## Sub-heading
 
-### Markdown
+And now you can get things going a little more with a sub-category. Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
 
-Thanks to [marked.js](https://github.com/chjj/marked) you can use markdown instead of writing HTML. This helps you to focus on your content. However, if you don't like markdown or don't know it yet, you can use HTML without any restrictions. 
 
-To use the markdown feature, it is very simple: 
-  * Wrap your markdown in a `&lt;div>` (or similar element) and give it the class "marked".
-  * Be sure not to indent your markdown too far- it will default to `&lt;pre>&lt;code>&lt;/code>&lt;/pre>` if you do and won't render.
-  * Optional: if you want to use markdown within an HTML element, wrap it in a `&lt;span>` (I have included a script that strips the `&lt;p>` tag when you use a `&lt;span>`)
+
+## Things to keep in mind
+
+* Update the posts.js file with the new information
+* Rename and move your current index.html to the archive (posts folder)
+** When you rename the file, if you name it with the posts directory it will get placed in that folder automatically: /posts/example_post_name.html
+** Be sure to go into posts.js and update the new filename &amp; path  
+
   
-To learn more about writing in markdown, view [Jon Schlinkert's](https://gist.github.com/jonschlinkert) [cheatsheet](https://gist.github.com/jonschlinkert/5854601) 
-
-### JS Includes
-
-To use the includes, you may want to learn a little about JSON (if you don't already). You don't need to be an expert and can very likely get away without learning it all, but why not learn something new? Check out these [JSON](https://www.json.com/) and [JSON Array](https://www.json.com/json-array) pages.
-
-Data for your links is stored in JSON arrays and then linked to the page template, so that with each new page you create, the links will automatically be included. However, this is an extra step- you'll need to update the JSON files when you write a new post.
-
-It's pretty simple: 
-  * Open the posts.js file for editing
-  * Copy the last entry- it should look something like this:
-    ```
-    {
-      "title": "JSON Overview",
-      "url": "https://www.json.com",
-      "date":"5/5/15"
-    }
-    ```
-  * Add a comma after this last curly brace
-  * Paste the copy on a new line after the last curly brace and comma
-  * Change the info to reflect your new post
-  * Commit (save) the changes to the posts.js file
-  
-The process for creating and updating the external links is the same except that you'll be dealing with the links.js file instead. 
-
-If you plan to hack this project, you can certainly include more metadata- just be sure to use proper JSON syntax.
-    
-    
-### Use &amp; License
-
-This work is free to use with an MIT license. If you decide to use this framework, I'd appreciate it if you would let me know and give me some feedback. However, this is not required- use of the framework requires no obligation.
-
-### MIT License info:
-
-Copyright (c) 2015 Tim Miller
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-   
   </div><!--/.marked-->
   
   </div><!--/.container-->
