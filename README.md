@@ -24,11 +24,11 @@ The idea is pretty simple- there is a JSON file that allows the navigation menu 
 
 * update the JSON file when you add a new post. It's pretty simple even if you don't know JSON- just follow the format of the existing entries. Cut and paste a previous entry and enter in the new data.
 
-* if you're using the markdown option, all markdown needs to appear within an element with the class `&lt;marked&gt;`.
+* if you're using the markdown option, all markdown needs to appear within an element with the class `<marked>`.
 
 ### Themes
 
-You can, of course, change the theme or get rid of the Bootswatch themes altogether by omitting that `&gt;link&lt;` element or by changing the href URL to point to one of the other [themes](https://bootswatch.com/ "Bootswatch homepage"). It's fairly simple to switch themes, replace the word 'flatly' with the other theme name in the URL. However, you may need to update the <code>blogs.css</code> file as well.
+You can, of course, change the theme or get rid of the Bootswatch themes altogether by omitting that `<link>` element or by changing the href URL to point to one of the other [themes](https://bootswatch.com/ "Bootswatch homepage"). It's fairly simple to switch themes, replace the word 'flatly' with the other theme name in the URL. However, you may need to update the `blogs.css` file as well.
 
 ### Creating an entry
 
