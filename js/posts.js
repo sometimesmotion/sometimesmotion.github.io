@@ -16,7 +16,8 @@ var blogs = [
 /*-----------------------------------------------------------------------
 
 To add new metadata for a post, copy the template from here (the comma on the first line is important)
-and paste it after the last curly brace } in the blogs JSON array above:
+and paste it after the last curly brace } in the blogs JSON array above
+list the posts in ascending order (from oldest to newest):
 
 ,
   {
@@ -28,21 +29,23 @@ and paste it after the last curly brace } in the blogs JSON array above:
 
 -----------------------------------------------------------------------*/
 
-
-//Create dynamic links for next and previous posts
-$('#next').hide();
-$('#prev').hide();
+//Populate the dropdown menu with archived posts
 function postsData() {
   for (var i = 0; i < blogs.length; i++) {
     $('#archiveList').append('<li><a href="'+blogs[i].url+'">'+blogs[i].title+'</a></li>');
   }
 }
 
+//Populate the archive list in the footer
 function recentPosts() {
-  for (var i = 0; i < blogs.length; i++) {
+  for (var i = 0; i < 4; i++) {
     $('#recent ul').append("<li><a href='"+blogs[i].url+"'>"+blogs[i].title+"</a></li>");
   }
 }
+
+//Create dynamic links for next and previous posts
+$('#next').hide();
+$('#prev').hide();
 
 //Populate the next and previous links with the correct info
 for (var i = 0; i < blogs.length; i++) {
