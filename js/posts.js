@@ -13,7 +13,7 @@ var blogs = [
   }, 
   {
     "title" : "A JS-Based Blogging Framework for Github Pages",
-    "url" : "http://sometimesmotion.github.io",
+    "url" : "http://sometimesmotion.github.io/index.html",
     "date":"5/15/15",
     "category":"blog framework"
   }
