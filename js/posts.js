@@ -6,8 +6,14 @@ var blogs = [
     "category":"web literacy"
   },
   {
+    "title" : "Post template",
+    "url" : "/template.html",
+    "date":"5/24/15",
+    "category":"blog framework"
+  },
+  {
     "title" : "A JS-Based Blogging Framework for Github Pages",
-    "url" : "http://sometimesmotion.github.io",
+    "url" : "/index.html",
     "date":"5/15/15",
     "category":"blog framework"
   }
