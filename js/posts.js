@@ -30,16 +30,16 @@ list the posts in ascending order (from oldest to newest):
 -----------------------------------------------------------------------*/
 
 //Populate the dropdown menu with archived posts
-function postsData(blogs) {
+function postsData() {
   for (var i = 0; i < blogs.length; i++) {
     $('#archiveList').append('<li><a href="'+blogs[i].url+'">'+blogs[i].title+'</a></li>');
   }
 }
 
 //Populate the archive list in the footer
-function recentPosts(blogs) {
-  for (var i = 0; i < blogs.length; i++) {
-    $('#recent ul').append("<li><a href='"+blogs[i].url+"'>"+blogs[i].title+"</a></li>");
+function recentPosts() {
+  for (var j = 0; j < blogs.length; j++) {
+    $('#recent ul').append("<li><a href='"+blogs[j].url+"'>"+blogs[j].title+"</a></li>");
   }
 }
 
@@ -48,13 +48,13 @@ $('#next').hide();
 $('#prev').hide();
 
 //Populate the next and previous links with the correct info
-for (var i = 0; i < blogs.length; i++) {
-  var url = blogs[i].url;
+for (var k = 0; k < blogs.length; k++) {
+  var url = blogs[k].url;
 
   //find where the current page sits in list
   var curURL = window.location.href; 
   if(url === curURL){
-    var place = i;
+    var place = k;
   }
   var nextPlace = place + 1;
   var postsLen = blogs.length;
