@@ -38,7 +38,7 @@ function postsData() {
 
 //Populate the archive list in the footer
 function recentPosts() {
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < blogs.length; i++) {
     $('#recent ul').append("<li><a href='"+blogs[i].url+"'>"+blogs[i].title+"</a></li>");
   }
 }
