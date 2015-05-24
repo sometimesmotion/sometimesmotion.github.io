@@ -4,10 +4,11 @@
 
 ### fixes & features to improve on:
 * piwik
-* eliminate script on 124 (index.html) - associated with strapdown.js?
-* elim strapdown.js theme sxn; update from using xmp to pre; choose other md parser?
 * comments
 * port to other repo
+* create/use md editor (gui) instead of writing into doc
+** incr. accessibility
+** enable user to preview and re-edit before publishing
 
 ## A JS-based Blogging Framework
 
