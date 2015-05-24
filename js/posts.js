@@ -30,14 +30,14 @@ list the posts in ascending order (from oldest to newest):
 -----------------------------------------------------------------------*/
 
 //Populate the dropdown menu with archived posts
-function postsData() {
+function postsData(blogs) {
   for (var i = 0; i < blogs.length; i++) {
     $('#archiveList').append('<li><a href="'+blogs[i].url+'">'+blogs[i].title+'</a></li>');
   }
 }
 
 //Populate the archive list in the footer
-function recentPosts() {
+function recentPosts(blogs) {
   for (var i = 0; i < blogs.length; i++) {
     $('#recent ul').append("<li><a href='"+blogs[i].url+"'>"+blogs[i].title+"</a></li>");
   }
