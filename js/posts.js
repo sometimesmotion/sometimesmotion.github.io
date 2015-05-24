@@ -1,7 +1,7 @@
 var blogs = [ 
   {
     "title" : "Web Literacy and #CritLib",
-    "url" : "http://sometimesmotion.github.io/posts/critlib-webliteracy.html",
+    "url" : "/posts/critlib-webliteracy.html",
     "date":"5/5/15",
     "category":"web literacy"
   },
@@ -12,6 +12,24 @@ var blogs = [
     "category":"blog framework"
   }
 ];
+
+/*-----------------------------------------------------------------------
+
+To add new metadata for a post, copy the template from here (the comma on the first line is important)
+and paste it after the last curly brace } in the blogs JSON array above:
+
+,
+  {
+    "title" : "",
+    "url" : "",
+    "date":",
+    "category":""
+  }
+
+-----------------------------------------------------------------------*/
+
+
+//Create dynamic links for next and previous posts
 $('#next').hide();
 $('#prev').hide();
 function postsData() {
@@ -26,7 +44,7 @@ function recentPosts() {
   }
 }
 
-
+//Populate the next and previous links with the correct info
 for (var i = 0; i < blogs.length; i++) {
   var url = blogs[i].url;
 
