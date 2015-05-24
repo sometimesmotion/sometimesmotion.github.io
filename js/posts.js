@@ -4,18 +4,18 @@ var blogs = [
     "url" : "http://sometimesmotion.github.io/posts/critlib-webliteracy.html",
     "date":"5/5/15",
     "category":"web literacy"
-  }, 
-  {
-    "title" : "A JS-Based Blogging Framework for Github Pages",
-    "url" : "http://sometimesmotion.github.io/dev.html",
-    "date":"5/15/15",
-    "category":"blog framework"
-  }, 
+  },
   {
     "title" : "Some third post",
     "url" : "http://third.com",
     "date":"5/25/15",
     "category":"privacy"
+  }, 
+  {
+    "title" : "A JS-Based Blogging Framework for Github Pages",
+    "url" : "http://sometimesmotion.github.io",
+    "date":"5/15/15",
+    "category":"blog framework"
   }
 ];
 $('#next').hide();
