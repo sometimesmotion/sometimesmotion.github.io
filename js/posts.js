@@ -61,7 +61,7 @@ for (var k = 0; k < blogs.length; k++) {
   var curURL = window.location.href; 
   curURL = curURL.replace(/^[^_]*.io/, '');
   if (curURL === "/") {
-    curURL = 'index.html';
+    curURL = '/index.html';
   }
   console.log('curURL: '+curURL);
   if(url === curURL){
