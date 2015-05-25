@@ -61,7 +61,7 @@ var social = [
 
 for (var i = 0; i < social.length; i++) {
   var type = social[i].type;
-  console.log(type);
+  console.log("type: "+type);
   if (type === "Twitter") {
     $('.socialFoot').append('<a href="#" class="btn btn-info social"><span class="hidden">Twitter</span><span class="ion-social-twitter-outline"></span></a>');
   } else if (type === "Email") {
