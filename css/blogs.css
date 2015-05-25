@@ -127,6 +127,10 @@ footer {
   min-width: 1px !important;
 }
 
+#shareLinks .success {
+  background: #18BC9C !important;
+}
+
 .icon {
   font-size: 2em;
 }
