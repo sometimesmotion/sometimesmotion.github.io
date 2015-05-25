@@ -40,6 +40,8 @@ function scrollToTop() {
 
 }
 
+function socialLinks(){
+
 var social = [ 
   {
     "type" : "Twitter",
