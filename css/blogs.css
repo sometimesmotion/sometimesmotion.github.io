@@ -107,6 +107,22 @@ footer {
   border-radius: 1.5em;
 }
 
+#shareLinks {
+  margin: 0 2em;
+}
+
+#shareLinks li {
+  text-align: center;
+}
+
+#shareLinks .dropdown-menu a {
+  padding: 0px 7px;
+}
+
+#shareLinks ul.dropdown-menu {
+  min-width: 1px !important;
+}
+
 @media (max-width: 400px) { 
   
   .navbar-brand {
