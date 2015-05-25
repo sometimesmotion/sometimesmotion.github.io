@@ -39,3 +39,32 @@ function scrollToTop() {
   });
 
 }
+
+var social = [ 
+  {
+    "title" : "@tmillerLibrary on Twitter",
+    "url" : "https://twitter.com/tmillerLibrary",
+    "type":"Twitter"
+  }, 
+  {
+    "title" : "Send me an email",
+    "url" : "mailto:millrt138@hotmail.com",
+    "type":"Email"
+  }, 
+  {
+    "title" : "View my contact info",
+    "url" : "http://t.co/nk55Zb5Dwx",
+    "type":"Contact"
+  }
+];
+
+for (var i = 0; i < social.length; i++) {
+  var type = social[i].type;
+  if (type === "Twitter") {
+    $('.socialFoot').append('<a href="#" class="btn btn-info social"><span class="hidden">Twitter</span><span class="ion-social-twitter-outline"></span></a>');
+  } else if (type === "Email") {
+    $('.socialFoot').append('<a href="#" class="btn btn-danger social"><span class="hidden">Email</span><span class="ion-ios-email-outline"></span></a>');
+  } else if (type === "Contact") {
+    $('.socialFoot').append('<a href="#" class="btn btn-warning social"><span class="hidden">Contact</span><span class="ion-ios-person-outline"></span></a>');
+  }
+}
