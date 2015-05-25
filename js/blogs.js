@@ -42,7 +42,6 @@ function scrollToTop() {
 
 function shareLinks(){
 	
-}
   var curURL = window.location.href;
   var msg = $('title').text();
   //$('footer').append(msg);
