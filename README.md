@@ -8,6 +8,7 @@
 ** configure &amp; update JSON
 ** create a new post
 * comments - use ost.io? github issues? (embed?)
+* images- creating css to position (ala medium)
 * port to other repo
 * create/use md editor (gui) instead of writing into doc
 ** incr. accessibility
