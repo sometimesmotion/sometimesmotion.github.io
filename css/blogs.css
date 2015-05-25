@@ -108,11 +108,15 @@ footer {
 }
 
 #shareLinks {
-  margin: 0 2em;
+  margin: 0.5em 2em;
 }
 
 #shareLinks li {
   text-align: center;
+}
+
+#shareLinks>li>a {
+  padding: 7px 15px;
 }
 
 #shareLinks .dropdown-menu a {
