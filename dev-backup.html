@@ -56,6 +56,17 @@
   
   <div class="container">
     
+  <ul id="shareLinks" class="nav nav-pills pull-right round-pill">
+    <li class="dropdown active">
+      <a class="dropdown-toggle success" data-toggle="dropdown" href="#">
+        <span class="hidden">Share</span><span class="ion-android-share-alt"></span>
+      </a>
+      <ul class="dropdown-menu">
+    
+      </ul>
+    </li>
+  </ul><!--/#shareLinks-->
+    
   <div class="marked">
     
 ## A JS-Based Blogging Framework for Github Pages
@@ -148,6 +159,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         </div>
       </div>
     </div>
+    
+    <nav class="container socialFoot">
+    </nav>
+    
   </footer>
 
   <script>
@@ -157,10 +172,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       postsData();
       recentPosts();
       linksData();
+      socialLinks();
+      shareLinks();
     });
   </script>
   <script src="/js/links.js"></script>
   <script src="/js/blogs.js"></script>
   <script src="/js/posts.js"></script>
+  <script src="/js/social.js"></script>
 </body>
 </html>
