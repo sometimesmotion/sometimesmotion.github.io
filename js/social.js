@@ -58,6 +58,11 @@ var social = [
     "type" : "YouTube",
     "title" : "",
     "url" : ""
+  }, 
+  {
+    "type" : "Flickr",
+    "title" : "View my photos on Flickr",
+    "url" : "https://www.flickr.com/photos/11435686@N03/"
   }
 ];
 
@@ -117,6 +122,10 @@ function socialLinks(){
       case "SnapChat":
         icon = "ion-social-snapchat-outline";
         color = "warning";
+        break;
+      case "Flickr":
+        icon = "fa fa-flickr";
+        color = "info";
         break;
       case "CreateYourOwn":
         icon = ""; //look up icon @ http://ionicons.com/
