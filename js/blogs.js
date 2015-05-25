@@ -40,6 +40,7 @@ function scrollToTop() {
 
 }
 
+function socialLinks() {
 var social = [ 
   {
     "title" : "@tmillerLibrary on Twitter",
@@ -67,4 +68,6 @@ for (var i = 0; i < social.length; i++) {
   } else if (type === "Contact") {
     $('.socialFoot').append('<a href="#" class="btn btn-warning social"><span class="hidden">Contact</span><span class="ion-ios-person-outline"></span></a>');
   }
+}
+
 }
