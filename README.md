@@ -4,9 +4,10 @@
 
 ### fixes & features to improve on:
 * piwik
-* add social media links
-* add share this post links
-* comments
+* create docs w/ gifs to show how to
+** configure &amp; update JSON
+** create a new post
+* comments - use ost.io? github issues? (embed?)
 * port to other repo
 * create/use md editor (gui) instead of writing into doc
 ** incr. accessibility
