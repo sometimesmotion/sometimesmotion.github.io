@@ -64,11 +64,11 @@ for (var i = 0; i < social.length; i++) {
   var url = social[i].url;
   //console.log("type: "+type);
   if (type === "Twitter") {
-    $('.socialFoot').append('<a href="'+url+'" class="btn btn-info social"><span class="hidden">Twitter</span><span class="ion-social-twitter-outline"></span></a>');
+    $('.socialFoot').append('<a href="'+url+'" target="_blank" class="btn btn-info social"><span class="hidden">Twitter</span><span class="ion-social-twitter-outline"></span></a>');
   } else if (type === "Email") {
-    $('.socialFoot').append('<a href="'+url+'" class="btn btn-danger social"><span class="hidden">Email</span><span class="ion-ios-email-outline"></span></a>');
+    $('.socialFoot').append('<a href="'+url+'" target="_blank" class="btn btn-danger social"><span class="hidden">Email</span><span class="ion-ios-email-outline"></span></a>');
   } else if (type === "Contact") {
-    $('.socialFoot').append('<a href="'+url+'" class="btn btn-warning social"><span class="hidden">Contact</span><span class="ion-ios-person-outline"></span></a>');
+    $('.socialFoot').append('<a href="'+url+'" target="_blank" class="btn btn-warning social"><span class="hidden">Contact</span><span class="ion-ios-person-outline"></span></a>');
   }
 }
 
