@@ -167,7 +167,7 @@ for (var i = 0; i < social.length; i++) {
   } //end switch
   var url = social[i].url;
   if(url){
-    $('.socialFoot').append('<a href="#" class="btn btn-'+color+' social"><span class="hidden">'+title+'</span><span class="'+icon+'"></span></a>');
+    $('.socialFoot').append('<a href="'+url+'" class="btn btn-'+color+' social"><span class="hidden">'+title+'</span><span class="'+icon+'"></span></a>');
   }
 }
 
