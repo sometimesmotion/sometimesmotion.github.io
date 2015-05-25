@@ -139,6 +139,22 @@ footer {
   border-radius: 2em;
 }
 
+a.twitterShare:hover {
+  background: #3498DB !important;
+}
+
+a.gplusShare:hover {
+  background: #E74C3C !important;
+}
+
+a.tumblrShare:hover {
+  background: #F39C12 !important;
+}
+
+a.facebookShare:hover {
+  background: #18BC9C !important;
+}
+
 @media (max-width: 400px) { 
   
   .navbar-brand {
