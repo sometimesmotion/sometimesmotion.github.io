@@ -6,7 +6,7 @@ var links = [
   },
   {
     "text": "Bike Rides",
-    "url": "http://output.jsbin.com/yajeyu/22",
+    "url": "http://output.jsbin.com/yajeyu",
     "title":"Rides map (leaflet.js)"
   },
   {
