@@ -92,10 +92,20 @@ And now you can get things going a little more with a sub-category. Lorem ipsum 
 See the image at the top of the post? It's easy to create this type of banner- just change out the URL and alt info in the template. To change the image from a banner that spans the entire screen to one that is the width of the main content, use the class `.container` instead of `.container-fluid`. 
 
 For other images within the content, you can use markdown like so: 
+
+```
+![Strongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk!")
+```
+This example shows up like so:
+
+![Stongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk!")
+
+To make images smaller sizes, use the following title with the `$#w width` syntax at the end like so:
+
 ```
 ![Strongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk! $#w 200")
 ```
-This example shows up like so:
+The resized image will look like this:
 
 ![Stongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk! $#w 200")
 
