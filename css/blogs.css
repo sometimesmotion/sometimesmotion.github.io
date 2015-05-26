@@ -47,6 +47,10 @@ h1, h2, h3 {
   width: 100%;
 }
 
+.container img {
+  max-width: 820px;
+}
+
 .container {
   max-width: 850px;
 }
