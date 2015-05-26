@@ -3,6 +3,7 @@ function parseMd() {
 $( ".marked" ).each(function( index ) {
   var text = $(this).text();
   var mdText = marked(text);
+  
   //if md is w/in a <span> element, strip <p> tags
   var tagType = $(this)[0].nodeName;
   //console.log('type: '+tagType);
