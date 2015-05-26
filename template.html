@@ -87,6 +87,22 @@ You could just as easily keep on with another paragraph. Lorem ipsum dolor sit a
 
 And now you can get things going a little more with a sub-category. Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.
 
+## Images
+
+See the image at the top of the post? It's easy to create this type of banner- just change out the URL and alt info in the template. To change the image from a banner that spans the entire screen to one that is the width of the main content, use the class `.container` instead of `.container-fluid`. 
+
+For other images within the content, you can use markdown like so: 
+```
+![Alt text](http://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+```
+This example shows up like so:
+
+![Alt text](http://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+All of these types of images will be displayed within the width of the main content. To make the image wider than the main content, you would need to end the `.marked` div and insert a `<div class="container-fluid">` with the `<img>` tucked neatly inside. You could then start up a new `.marked` div to continue on with your writing. 
+
+
+
 ## Things to keep in mind
 
 * Update the posts.js file with the new information
