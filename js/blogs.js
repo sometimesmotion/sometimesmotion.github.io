@@ -65,34 +65,36 @@ console.log(twitterURL);
 function imgSizer(){
   $( "img" ).each(function( index ) {
     var title = $(this).attr('title');
-  //process width info
-    w = title.match(/width\=[^;]*;/);
-    if(w){
-      w = w[0].replace('width=','').replace(';','');
-      $(this).css('width',w);
+    
+    if(title){
+	  //process width info
+	    w = title.match(/width\=[^;]*;/);
+	    if(w){
+	      w = w[0].replace('width=','').replace(';','');
+	      $(this).css('width',w);
+	    }
+	  //process alignment info  
+	    a = title.match(/align\=[^;]*;/);
+	    if(a){
+	      a = a[0].replace('align=','').replace(';','');
+	      switch(a) {
+	        case 'center':
+	          $(this).css({
+	            'margin':'0 auto',
+	            'display':'block'
+	          });
+	          break;
+	        case 'left':
+	          $(this).css('float','left');
+	          break;
+	        case 'right':
+	          $(this).css('float','right');
+	          break;
+	        default:
+	          $(this).css('float','none');
+	      }
+	    }
     }
-  //process alignment info  
-    a = title.match(/align\=[^;]*;/);
-    if(a){
-      a = a[0].replace('align=','').replace(';','');
-      switch(a) {
-        case 'center':
-          $(this).css({
-            'margin':'0 auto',
-            'display':'block'
-          });
-          break;
-        case 'left':
-          $(this).css('float','left');
-          break;
-        case 'right':
-          $(this).css('float','right');
-          break;
-        default:
-          $(this).css('float','none');
-      }
-    }
-  
   });
 }
 
