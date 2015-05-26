@@ -100,7 +100,7 @@ This example shows up like so:
 
 ![Stongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk!")
 
-To make images smaller sizes, use the following title with the `$#w width` syntax at the end like so:
+To make images smaller sizes, add the following to the title: `width=200;`
 
 ```
 ![Strongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk! width=200;")
@@ -108,6 +108,17 @@ To make images smaller sizes, use the following title with the `$#w width` synta
 The resized image will look like this:
 
 ![Stongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk! width=200;")
+
+To align the images, add the following to the title: `align=center;`
+
+```
+![Strongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk! width=200; align=center;")
+```
+The aligned image will look like this:
+
+![Stongbad Octocat](https://octodex.github.com/images/strongbadtocat.png "Don't give me none of that crosstalk! width=200; align=center;")
+
+_All images that are left or right aligned will have a float and the text will wrap around the image_
 
 All of these types of images will be displayed within the width of the main content. To make the image wider than the main content, you would need to end the `.marked` div and insert a `<div class="container-fluid">` with the `<img>` tucked neatly inside. You could then start up a new `.marked` div to continue on with your writing. 
 
