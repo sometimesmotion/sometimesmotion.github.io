@@ -66,7 +66,7 @@ function imgSizer(){
   $( "img" ).each(function( index ) {
     var title = $(this).attr('title');
 //console.log(title);
-    size = title.replace(/^[^_]*\$#w /, '');
+    var size = title.replace(/^[^_]*\$#w /, '');
     $(this).css('width',size);
 //console.log(size);
     title = title.replace(/\$(.*?)\$ /, '');
