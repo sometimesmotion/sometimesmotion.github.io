@@ -61,3 +61,16 @@ console.log(twitterURL);
   $('#shareLinks .dropdown-menu').append('<li><a href="'+gplusURL+'" target="_blank" class="gplusShare"><span class="hidden shareName">Google +</span><span class="icon ion-social-googleplus-outline"></span></a></li>');    
   
 }
+
+function imgSizer(){
+  $( "img" ).each(function( index ) {
+    var title = $(this).attr('title');
+//console.log(title);
+    size = title.replace(/^[^_]*\$#w /, '');
+    $(this).css('width',size);
+//console.log(size);
+    title = title.replace(/\$(.*?)\$ /, '');
+    $(this).attr('title',title);
+
+  });
+}
