@@ -65,45 +65,35 @@ console.log(twitterURL);
 function imgSizer(){
   $( "img" ).each(function( index ) {
     var title = $(this).attr('title');
-//console.log(title);
-    if (title){
-      var size = title.replace(/^[^_]*\$#w /, '');
-      $(this).css('width',size);
-//console.log(size);
-      title = title.replace(/\$(.*?)\$ /, '');
-      $(this).attr('title',title);
+  //process width info
+    w = title.match(/width\=[^;]*;/);
+    if(w){
+      w = w[0].replace('width=','').replace(';','');
+      $(this).css('width',w);
     }
+  //process alignment info  
+    a = title.match(/align\=[^;]*;/);
+    if(a){
+      a = a[0].replace('align=','').replace(';','');
+      switch(a) {
+        case 'center':
+          $(this).css({
+            'margin':'0 auto',
+            'display':'block'
+          });
+          break;
+        case 'left':
+          $(this).css('float','left');
+          break;
+        case 'right':
+          $(this).css('float','right');
+          break;
+        default:
+          $(this).css('float','none');
+      }
+    }
+  
   });
 }
 
-$( "img" ).each(function( index ) {
-  var title = $(this).attr('title');
-//process width info
-  w = title.match(/width\=[^;]*;/);
-  if(w){
-    w = w[0].replace('width=','').replace(';','');
-    $(this).css('width',w);
-  }
-//process alignment info  
-  a = title.match(/align\=[^;]*;/);
-  if(a){
-    a = a[0].replace('align=','').replace(';','');
-    switch(a) {
-      case 'center':
-        $(this).css({
-          'margin':'0 auto',
-          'display':'block'
-        });
-        break;
-      case 'left':
-        $(this).css('float','left');
-        break;
-      case 'right':
-        $(this).css('float','right');
-        break;
-      default:
-        $(this).css('float','none');
-    }
-  }
 
-});
