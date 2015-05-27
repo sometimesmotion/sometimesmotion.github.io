@@ -68,13 +68,13 @@ function imgSizer(){
     
     if(title){
 	  //process width info
-	    w = title.match(/width\=[^;]*;/);
+	    w = title.match(/width=[\d]+;/);
 	    if(w){
 	      w = w[0].replace('width=','').replace(';','');
 	      $(this).css('width',w);
 	    }
 	  //process alignment info  
-	    a = title.match(/align\=[^;]*;/);
+	    a = title.match(/align=[\w]+;/);
 	    if(a){
 	      a = a[0].replace('align=','').replace(';','');
 	      switch(a) {
