@@ -5,14 +5,14 @@
 ### fixes & features to improve on:
 * piwik
 * create docs w/ gifs to show how to
-** configure &amp; update JSON
-** create a new post
+  * configure &amp; update JSON
+  * create a new post
 * comments - use ost.io? github issues? (embed?)
 * images- creating css to position (ala medium)
 * port to other repo
 * create/use md editor (gui) instead of writing into doc
-** incr. accessibility
-** enable user to preview and re-edit before publishing
+  * incr. accessibility
+  * enable user to preview and re-edit before publishing
 
 ## A JS-based Blogging Framework
 
