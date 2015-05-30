@@ -4,18 +4,13 @@ $( ".marked" ).each(function( index ) {
 	var text = $(this).html().trim();
 	var mdtext = marked(text);
 	var mdsplit = mdtext.split(/\n/);
-//console.log(mdsplit);
+//I couldn't get the blockquote work with html(), so this is a regex fix
 	for(i=0; i < mdsplit.length; i++){
   	mdsplit[i] = mdsplit[i].replace(/<p>&gt;/g,'<blockquote>').replace(/<\/p>/g,'</blockquote>');
-  //console.log(mdsplit[i]);
 	}
-	
-  //var text = $(this).html();
-  //var mdText = marked(text);
   
-  //if md is w/in a <span> element, strip <p> tags
+  //to allow md in a <span> instead of just block elements
   var tagType = $(this)[0].nodeName;
-  //console.log('type: '+tagType);
   if (tagType === "SPAN") {
     mdsplit = mdsplit.replace('<p>','');
     mdsplit = mdsplit.replace('</p>','');
