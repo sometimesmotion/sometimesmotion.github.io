@@ -10,8 +10,8 @@ $( ".marked" ).each(function( index ) {
   //console.log(mdsplit[i]);
 	}
 	
-  var text = $(this).text();
-  var mdText = marked(text);
+  //var text = $(this).html();
+  //var mdText = marked(text);
   
   //if md is w/in a <span> element, strip <p> tags
   var tagType = $(this)[0].nodeName;
