@@ -50,10 +50,11 @@ function shareLinks(){
 console.log(twitterURL);
   var gplusURL = 'https://plus.google.com/share?url='+curURL;
   var tumblrURL = 'http://www.tumblr.com/share/link?url='+curURL+'&amp;name='+msg;
-  var facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='+curURL+'&t='+msg;
+  //https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.parts-express.com%2feminence-patriot-swamp-thang-12-guitar-speaker-150w-16-ohm--290-812
+  var facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='+curURL+'%2f'+msg;
 //Twitter
   $('#shareLinks .dropdown-menu').append('<li><a href="'+twitterURL+'" target="_blank" class="twitterShare"><span class="hidden shareName">Twitter</span><span class="icon ion-social-twitter"></span></a></li>');
-//Facebook
+//Facebook  
   $('#shareLinks .dropdown-menu').append('<li><a href="'+facebookURL+'" target="_blank" class="facebookShare"><span class="hidden shareName">Facebook</span><span class="icon ion-social-facebook"></span></a></li>');    
 //Tumblr
   $('#shareLinks .dropdown-menu').append('<li><a href="'+tumblrURL+'" target="_blank" class="tumblrShare"><span class="hidden shareName">Tumblr</span><span class="icon ion-social-tumblr"></span></a></li>');    
