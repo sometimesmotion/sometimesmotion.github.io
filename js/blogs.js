@@ -17,13 +17,13 @@ $( ".marked" ).each(function( index ) {
   var tagType = $(this)[0].nodeName;
   //console.log('type: '+tagType);
   if (tagType === "SPAN") {
-    mdText = mdText.replace('<p>','');
-    mdText = mdText.replace('</p>','');
+    mdsplit = mdsplit.replace('<p>','');
+    mdsplit = mdsplit.replace('</p>','');
     $(this).after('<span class="mdOutput"></span>');
-    $(this).next('.mdOutput').html(mdText);
+    $(this).next('.mdOutput').html(mdsplit);
   } else {
     $(this).after('<span class="mdOutput"></span>');
-    $(this).next('.mdOutput').html(mdText);
+    $(this).next('.mdOutput').html(mdsplit);
   }
 });
   
