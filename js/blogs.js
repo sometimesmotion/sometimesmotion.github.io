@@ -1,6 +1,15 @@
 function parseMd() {
 
 $( ".marked" ).each(function( index ) {
+	var text = $(this).html().trim();
+	var mdtext = marked(text);
+	var mdsplit = mdtext.split(/\n/);
+//console.log(mdsplit);
+	for(i=0; i < mdsplit.length; i++){
+  	mdsplit[i] = mdsplit[i].replace(/<p>&gt;/g,'<blockquote>').replace(/<\/p>/g,'</blockquote>');
+  //console.log(mdsplit[i]);
+	}
+	
   var text = $(this).text();
   var mdText = marked(text);
   
