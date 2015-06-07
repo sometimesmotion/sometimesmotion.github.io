@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2015 by millrt138 (http://jsbin.com/begoya)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+  <title>Custom Search Box</title>
+
+<style>
+body {
+  background: #ECF0F1;
+}
+
+.container {
+  max-width: 800px;
+  
+}
+
+.jumbotron {
+  margin: 1em 0 5em 0;
+  background: #fff;
+  padding-top: 1em;
+}
+
+.navbar-header a {
+  font-family: lobster;
+  font-size: 2.5em !important;
+  padding: 0.25em;
+}
+
+img {
+  max-width: 100%;
+  margin: 0;
+  border: 2px solid #333;
+  border-radius: 4px;
+}
+
+.bold, h2, h3, h4 {
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.jumbotron li {
+  font-size: 1.5em;
+}
+
+.footer {
+  color: #fff;
+  font-size: 3em;
+  max-height: 50px;
+  padding-bottom: 1.75em;
+}
+
+.footer .container {
+  padding: 0.em;
+}
+
+.footer.navbar-default {
+  background: none;
+}
+
+.ion-ios-arrow-right {
+  float: right;
+}
+
+.ion-ios-arrow-left {
+  float: left;
+}
+
+
+#next, #last {
+  cursor: pointer;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+.dirIcon {
+  margin: -0.5em 1em;
+  background: none;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  color: #2c3e50;
+  border-radius: 1em;
+  box-shadow: 0px 0px 10px rgba(189, 195, 199,0.5);
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  background: rgba(26, 188, 156,1.0);
+  padding: 1em;
+  color: #fff;
+  border-radius: 5px;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+form button {
+  color: #333;
+}
+
+.navbar span {
+  overflow: visible !important;
+}
+
+img.still, img.animated {
+  cursor: pointer;
+}
+
+#progressBar {
+  height: 0.5em;
+  width: 100%;
+  background: rgba(44, 62, 80,1.0);
+  bottom: 0;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#progress {
+  background: rgba(26, 188, 156,1.0);
+  margin: 0;
+  padding: 0;
+  height: 0.5em;
+  width: 0;
+}
+</style>
+</head>
+<body>
+<nav class="nav navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Sometimes Motion</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">First <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Second</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Right</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+
+<!-------------------------------------------->
+
+  <div class="container">
+<div class="jumbotron active">
+## Custom Search Box
+The purpose of this exercise is to demonstrate how URL query strings can be used to create search widgets that can be embedded in websites.
+    </div>
+    
+<div class="jumbotron">
+## Intro: Search Box Basics
+### <span class="text-muted">And how to make your own</span>
+  <p>This lesson continues from Part A, which covered the basics of URL query strings and how they can be used to construct searches. Now we will use these concepts to create a search plug-in for our users so that they can easily find <a href="http://creativecommons.org/about" target="_blank" title="Creativecommons.org About Page">Creative Commons</a> images on <a href="https://www.flickr.com/" target="_blank" title="Flickr homepage">Flickr</a>.</p>
+  <p>In the following project, we will create a simple search box where the user can type in their own search term and then will be taken to a list of results on Flickr.</p>
+  <p>The basic pieces are simple enough, and once we put them all together we will have created a nice little search plug-in.</p>
+
+  </div>
+    
+<div class="jumbotron">
+  <h2>1. JS Bin</h2>
+  <p>For this phase of our project we are going to use a great <a href="http://en.wikipedia.org/wiki/Open-source_software" target="_blank" title="Wikipedia entry for Open Source Software"> Open Source</a> application for this project- <a href="http://jsbin.com/help/getting-started" target="_blank" title="JS Bin Getting Started Page"> JSBin</a>. JSBin is configured in a way that is in keeping with real-world web development. Let's look at some of the specifics of JSBin: </p>
+  <ul>
+    <li><strong>Panels: </strong>JSBin has multiple panels which can be hidden or displayed by clicking on the buttons at the top. Each panel is for a different language, plus the preview. For our purposes, that means three panels: HTML, JS &amp; preview. Think of the separate panels as separate files- which is how all of these components are most often arranged in the real world. Getting used to working with these separately is a good practice.
+    </li>
+    <li><strong>Versioning: </strong>In JSBin all of your versions are saved and numbered each time you choose to save. This can get confusing if you forget that you need to remember to get the URL of the most recent project. However, you can substitute the word 'latest' for the version number in the URL and you will be taken to the latest version.
+    </li>
+    <li><strong>All sorts of cool stuff: </strong>To be honest, I really like JSBin and it has all sorts of great features that we don't need to get into here, but if you are interested, check out their <a href="http://jsbin.com/help/features" title="JSBin Features Page" target="_blank">Features</a> page.
+    </li>
+  </ul>
+  <p>We will be using JSBin with some code snippets below- if your screen size is too small to see the embedded JSBin exercises, click on the JSBin logo (Dave, the Bin-bot, who looks like a little can) to go straight to the full version. We will also be using JSBin for our project- the link at the bottom of the page will take you to the JSBin site to complete it.</p>
+
+  </div>
+    
+<div class="jumbotron">
+  <h2>2. Search Boxes</h2>
+  <p>We're all familiar with search boxes, especially this one:</p>
+  <p>But have you ever wondered how to create your own? Well, with query strings and HTML forms, we can do this fairly easily. The code is actually pretty straight-forward: we'll grab the user's input and save that in our <code>queryString</code> variable which we'll then manipulate into our URL. If this isn't making any sense- don't panic! Read on... 
+  </p>
+  </div>
+    
+<div class="jumbotron">
+  <h2>3. A Mini Guide to HTML &amp; JavaScript</h2>
+  <p>We aren't going to get into too much detail for this exercise, but for you to fully understand what we're talking about, we'll need to discuss a couple of things:</p>
+  <ol type="A">
+    <li><strong>HTML Element:</strong> <a href="http://en.wikipedia.org/wiki/HTML" target="_blank" title="HTML Wikipedia entry">HTML</a> (HyperText Markup Language) is the coding language that web pages are built with. Think of it as the skeleton of a webpage- it provides the basic structure of the page and organization of the content. HTML on its own is just text- without any formatting or styles and without any action. Just as a skeleton can't move without muscles (it's basically just a pile of bones), HTML is inactive on its own- it's just a bunch of text. <br><br>
+      <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" title="CSS Wikipedia entry">CSS</a> (Cascading Style Sheets) is used to style HTML- kind of like the skin and clothes. If you're not yet rolling your eyes at this Frankenstein-ian analogy, <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank" title="JS Wikipedia entry">JavaScript</a> is therefore the muscle and the web developer and the user are both the brain. <br><br>
+      Each 'bone' in the skeleton of an HTML page is called an <code>element</code>- these are written out using opening and closing tags, enclosed in angle brackets, like so:
+      <pre>&lt;h3&gt;<span class="grayFont">This is a heading</span>&lt;/h3&gt;</pre>
+      The <code>&lt;h3&gt;</code> <code>element</code> is a third level heading. The heading content begins after the <code>&lt;h3&gt;</code> tag, and ends with the closing tag, which has a backslash, like so: <code>&lt;/h3&gt;</code>.<br><br>We can also nest <code>elements</code> like so:
+      <pre>&lt;p&gt;<span class="grayFont">This is a paragraph with a</span> &lt;a&gt;<span class="grayFont">link</span>&lt;/a&gt; <span class="grayFont">inside it</span>&lt;/p&gt;</pre>
+      <div class="asideNote">[Note: The <code>&lt;p&gt;</code> tag is for a paragraph and the <code>&lt;a&gt;</code> tag is for a link.]</div>
+    </li>
+    <li><strong>JS Variable:</strong> In computer programming, <code>variables</code> are similar to those used in Algebra- except that we can use <code>variables</code> to represent any type of data, not just numbers. A <code>variable</code> can be thought of as a shorthand- instead of having to type out "schipperke" a bunch of times and risk misspelling things, we can store the text inside of a <code>variable</code>, such as <code class="salmonFont">term</code> like so:
+      <pre>var <span class="salmonFont">term</span> = "<span class="grayFont">schipperke</span>";</pre>
+      <div class="asideNote">[Note: We type out <code>var</code> to signify that we are about to define a <code>variable</code>. Also, when we assign a value that is not a number, it needs to be inside quotation marks.] </div>
+      Now, if I were to write the following script:
+      <pre>"<span class="grayFont">Let's search for</span> " + <span class="salmonFont">term</span> + " <span class="grayFont">photos in Flickr.</span>"</pre>
+      The output would be:
+      <pre><span class="grayFont">Let's search for schipperke photos in Flickr.</span></pre>
+      The real beauty of <code>variables</code> is that we can change them later, like so:
+      <pre><span class="salmonFont">term</span> = <span class="salmonFont">term</span> + " <span class="grayFont">puppy</span>";</pre>
+      Our <code>variable</code> <code class="salmonFont">term</code> is now equal to: "schipperke puppy" and the output of our script above would now be:
+      <pre><span class="grayFont">Let's search for schipperke puppy photos in Flickr.</span></pre>
+      <div class="tryIt">
+        <h5>Try it out:</h5>
+        <a class="jsbin-embed" href="http://jsbin.com/risuta/latest/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+      </div><!--/tryIt-->
+    </li>
+    <li><strong>jQuery selector:</strong> <a href="http://en.wikipedia.org/wiki/JQuery" target="_blank" title="jQuery Wikipedia entry">jQuery</a> is a JS library that makes it easier for us to manipulate HTML &amp; CSS. Simply put, jQuery gives us some shortcuts to work with our webpages. In order to target specific elements on a page, we will use jQuery <code>selectors</code>. Using jQuery to do this can be very complicated with most real-world webpages and I highly recommend taking the jQuery tutorial at Code School (<a href="http://try.jquery.com/" target="_blank" title="Try jQuery Tutorial">try.jquery.com</a>) if you want to learn more, but the basic idea is this:
+      <pre>$('a').text("<span class="grayFont">Schipperke</span>");</pre>
+      <div class="asideNote">[Note: The dollar sign is a cue that we're using jQuery- whenever you use jQuery, you'll need to be sure to include that dollar sign!]</div>
+      This line of code will insert the text "Schipperke" into every <code>&lt;a&gt;</code> element on the page. We accomplish this by using the <code>a</code> <code>selector</code>.<br>
+      If we wanted to change the text in a paragraph, we could use a <code>p</code> <code>selector</code> to write:
+      <pre>$('p').text('<span class="grayFont">This is the new paragraph text.</span>');</pre>
+      <div class="tryIt">
+        <h5>Try it out:</h5>
+        <a class="jsbin-embed" href="http://jsbin.com/wiseha/latest/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+      </div><!--/tryIt-->
+      A more clever way to acheive this using our variable above would be:
+      <pre>$('a').text(<span class="salmonFont">term</span>);</pre>
+      <div class="tryIt">
+        <h5>Try it out:</h5>
+        <a class="jsbin-embed" href="http://jsbin.com/hasoso/latest/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+      </div><!--/tryIt-->
+    </li>
+    <li><strong>jQuery id selector:</strong> Instead of simply targeting a type of element (which might affect all sorts of content on a page- sometimes we don't want to change every single paragraph, for instance), jQuery allows us to get much more specific. There are many ways to do this, but we are going to use the <code>id selector</code>. We can select an element based on its <code>id</code> like so:
+      <pre>$('#textInput').text("<span class="grayFont">We are targeting just the element with the textInput id.</span>");</pre>
+      The symbol for selecting the <code>id</code> is the <code>#</code>. Therefore, the script above is targeting the element with <code><span class="greenFont">id</span>=<span class="redFont">"textInput"</span></code> and is then grabbing the value of that input. Simply put: that script is grabbing the text the user types into the search box.<br>
+      <div class="tryIt">
+        <h5>Try it out:</h5>
+        <a class="jsbin-embed" href="http://jsbin.com/mufeqe/latest/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+      </div><!--/tryIt-->
+      <br>
+    </li>
+  </ol>
+  
+  </div>
+    
+<div class="jumbotron">
+  <h2>4. HTML Forms</h2>
+  <p>For the purposes of this exercise, we'll have to talk a bit about HTML forms, but I'm going to keep it simple 
+  <ul>
+    <li><strong>Text Input: </strong>every form has different ways for users to enter their own input (that's what a form is for, right?!). We are going to want our users to be able to type any text that they want, so we will be using a <code>text</code> input which looks like this:
+      <pre>&lt;input <span class="greenFont">type</span>=<span class="redFont">'text'</span> <span class="greenFont">name</span>=<span class="redFont">'searchTerm'</span> <span class="greenFont">id</span>=<span class="redFont">'searchTerm'</span>&gt;</pre>
+      Notice that we have some <code>attributes</code> here- the <code class="greenFont">type</code> <code>attribute</code> specifies that we are asking for <code class="redFont">text</code> and the <code class="greenFont">name</code> and <code class="greenFont">id</code> <code>attributes</code> are used to manipulate the element. In our script, we'll use the <code class="greenFont">id</code> to specifiy where we will grab the input <code class="greenFont">value</code>. The <code class="greenFont">value</code> of a text input field is what the user types in. We can insert a <code class="greenFont">value</code> by specifying that <code>attribute</code> and <code>value</code> pair if we want to have a suggestion already loaded in the field, but for now, we'll just leave it blank. For an example of a pre-loaded <code class="greenFont">value</code> in a search form, look back at the example in <a href="queryString.html#hsuSearch">Part A</a> (the <code class="greenFont">value</code> for that form input is "URL Query String Exercise"). 
+    </li>
+    <li><strong>Submit button:</strong>The second type of input we are going to use is <code>submit</code>. Once the user has entered her search terms into the text box, she will need a way to signal that she is ready to search for those terms. By clicking on the <code>submit</code> button, our script will be run and her search will be under way.
+    </li>
+  </ul>
+</div>
+    
+<div class="jumbotron">
+  <h2>5. Next Step</h2>
+  <p>Now it is time to work on our project and finally get our hands dirty! You will be creating a search box that will allow your viewers to search for Creative Commons photos in Flickr right from your site. To do this, you will:</p>
+  <ol style="padding-left: 2em;">
+    <li> grab the term(s) that the user inputs into the search box</li>
+    <li>convert the terms into a query string</li>
+    <li>insert the query string into a URL</li>
+    <li>and then open that URL in a new tab</li>
+  </ol>
+  <p>Got it? Let's go! Click the button below to open the project.</p>
+  <a href="http://jsbin.com/yiwedi/latest/edit?html,js,output" target="_blank" role="button" title="URL query string project" class="button btn btn-warning">View the project &nbsp; <span class="ion-chevron-right"></span>
+  </a>
+</div>
+    
+<!--
+  <div class="jumbotron">
+    <h2></h2>
+    <p></p>
+  </div>
+-->
+    
+    
+    
+</div><!--/.container-->
+
+<!-------------------------------------------->
+
+<nav class="navbar footer navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <span id="last" class="last dirIcon ion-ios-arrow-left"></span>
+    <span id="next" class="next dirIcon ion-ios-arrow-right"></span>
+</nav>
+  </div>
+    <div id="progressBar" class="container navbar-fixed-bottom">
+      <div id="progress"></div>
+    </div>
+  
+  <script>
+    $(document).ready(function(){
+      //parseMd();
+      //imgSizer();
+    });
+  </script>
+<script>
+$(document).ready(function(){
+
+  $('.jumbotron').hide();
+  $('.jumbotron.active').show();
+    var artLen = $('.jumbotron').length;
+    var slide;
+  
+  
+  //Create 'next' button at bottom of each slide
+  //$('.jumbotron').append('<span class="next btn btn-info">Next &nbsp;<span class="ion-ios-arrow-right"></span></span>');
+  
+    
+//Markdown support
+  function parseMd() {
+
+$( ".jumbotron" ).each(function(index) {
+	var text = $(this).html().trim();
+	var mdtext = marked(text);
+	var mdsplit = mdtext.split(/\n/);
+//I couldn't get the blockquote work with html(), so this is a regex fix
+	for(i=0; i < mdsplit.length; i++){
+  	mdsplit[i] = mdsplit[i].replace(/<p>&gt;/g,'<blockquote>').replace(/<\/p>/g,'</blockquote>');
+	}
+  
+  //to allow md in a <span> instead of just block elements
+  var tagType = $(this)[0].nodeName;
+  if (tagType === "SPAN") {
+    mdsplit = mdsplit.replace('<p>','');
+    mdsplit = mdsplit.replace('</p>','');
+    $(this).html(mdsplit);
+  } else {
+    $(this).html(mdsplit);
+  }
+});
+  
+}
+  parseMd();
+  
+ //Size slide to window height
+  var height = window.innerHeight;
+  height = height*0.70;
+  //console.log(height);
+  $('.jumbotron').css('min-height',height);
+  
+  function toTop(){
+    $('html, body').animate({scrollTop:0}, 0);
+  }
+    
+ //Transition to next slide
+  function nextSlide(target){
+    var index = $('.jumbotron').index(target);
+    index++;
+    if(index < artLen){
+      $(target).hide();
+      toTop();
+      var noFadeClass = $(target).next().hasClass('noFade');
+      if(noFadeClass){
+        $(target).next().show();
+      } else {
+        $(target).next().fadeIn("fast");
+      }
+      $(target).next().addClass('active');
+      $(target).removeClass('active'); 
+      $('.instructions').hide();
+    } else {
+      $('.endMessage').show();
+    }
+  }
+  
+ //Transition to prev slide
+  /*function lastSlide(target){
+    var index = $('.jumbotron').index(target);
+    index++;
+    if(index > 1){
+      //console.log("Current slide: "+index+"; Total slides: "+artLen);
+      $(target).hide();
+      toTop();
+      var noFadeClass = $(target).hasClass('noFade');
+      if(noFadeClass){
+        $(target).prev().show();
+      } else {
+        $(target).prev().fadeIn("fast");
+      }  
+      $(target).prev().addClass('active');
+      $(target).removeClass('active');  
+      $('.endMessage').hide();
+    }
+  }*/
+  
+ //Arrow button functionality
+  $('span').click(function(e){
+    var nextSlide = $(this).hasClass('next');
+    //console.log(nextSlide);
+    //console.log("span clicked");
+    var lastSlide = $(this).hasClass('last');
+    var activeIndex = $('.jumbotron.active').index();
+    if(nextSlide && activeIndex < artLen-1){
+      //console.log(artLen-activeIndex);
+      $('.jumbotron.active').hide();
+      toTop();
+      $('.jumbotron.active').removeClass('active').next('.jumbotron').addClass('active');
+      $('.jumbotron.active').show();
+    } else if (lastSlide && activeIndex >= 1) {
+      $('.jumbotron.active').hide();
+      toTop();
+      $('.jumbotron.active').removeClass('active').prev('.jumbotron').addClass('active');
+      $('.jumbotron.active').show();
+    }
+  });
+   
+ //Click function to run next fxn
+ /* $(".jumbotron").click(function(e){
+   var target = $(e.target), article;
+   //console.log(target);
+   var pWidth = $(this).innerWidth(); 
+   var pOffset = $(this).offset(); 
+   var side;
+   var targetParent = target.parents().is('a, img, form');
+   var targetLink = target.is('a, img, form');
+   var x = e.pageX - pOffset.left;
+    if(pWidth/2 > x) {      
+      if(targetLink || targetParent){
+      //don't advance the slide if a link is clicked
+      } else { 
+        lastSlide(this);
+      }
+    } else {
+      if(targetLink || targetParent){
+      //don't advance the slide if a link is clicked
+      } else { 
+        nextSlide(this);
+      }
+    }
+  });*/
+  
+  //Create keyboard navigation
+  window.addEventListener("keydown", moveSomething, false);
+ 
+  function moveSomething(e) {
+    var activeSlide = $('.jumbotron.active');
+    switch(e.keyCode) {
+      case 37: //left
+        lastSlide(activeSlide);
+        break;  
+      case 38: //up
+        //nextSlide(activeSlide);
+        break;
+      case 39: //right
+        nextSlide(activeSlide);
+        break;
+      case 40: //down
+        //lastSlide(activeSlide);
+        break; 
+    }  
+  }
+  
+  //Delete placeholder text 
+  $( "input" ).one( "click", function() {
+   $(this).val('');
+  });
+  
+    //GIF handling
+
+  $('img').each(function(e){
+    var src = $(this).attr('src');
+  var img = $(this);
+  var icon = $(this).next('.imgIcon');
+    $(this).click(function(){
+      var gif = '_anim.gif';
+      var still = '_still.png';
+      var animClass = $(this).attr('class');
+    if (animClass === "still") {
+      $(this).attr('src',src.replace(still,gif));
+      $(this).attr('class','animated');
+      $(this).next('.imgIcon').removeClass('ion-ios-play').addClass('ion-ios-pause');
+    } else if (animClass === "animated") {
+      $(this).attr('src',src.replace(gif,still));
+      $(this).attr('class','still');
+      $(this).next('.imgIcon').removeClass('ion-ios-pause').addClass('ion-ios-play');
+    } 
+      //console.log(animClass);
+    });
+  });
+  
+  
+//Progress bar
+  function moveProgress(){
+    var progress = '';
+    var activeIndex = $('.jumbotron.active').index();
+    progress = (100/artLen)*(activeIndex+1);
+    //console.log(progress);  
+    $('#progress').css('width',progress+'%');
+  }
+  
+  moveProgress();
+  
+  $('body').click(function(){
+    moveProgress();
+  });
+  
+    window.addEventListener("keydown", moveProgress, false);
+
+  
+//Image sizer
+  function imgSizer(){
+  $( "img" ).each(function( index ) {
+    var title = $(this).attr('title');
+    
+    if(title){
+	  //process width info
+	    w = title.match(/width=[\d]+;/);
+	    if(w){
+	      w = w[0].replace('width=','').replace(';','');
+	      $(this).css('width',w);
+	    }
+	  //process alignment info  
+	    a = title.match(/align=[\w]+;/);
+	    if(a){
+	      a = a[0].replace('align=','').replace(';','');
+	      switch(a) {
+	        case 'center':
+	          $(this).css({
+	            'margin':'0 auto',
+	            'display':'block'
+	          });
+	          break;
+	        case 'left':
+	          $(this).css('float','left');
+	          break;
+	        case 'right':
+	          $(this).css('float','right');
+	          break;
+	        default:
+	          $(this).css('float','none');
+	      }
+	    }
+    }
+  });
+}
+  imgSizer();
+  
+  
+}); //end of document.ready
+
+</body>
+</html>
