@@ -123,22 +123,13 @@ img.still, img.animated {
   cursor: pointer;
 }
 
-#progressBar {
+#progress {
   height: 0.5em;
   width: 100%;
-  background: rgba(44, 62, 80,1.0);
   bottom: 0;
   padding: 0;
   margin: 0 auto;
   text-align: center;
-}
-
-#progress {
-  background: rgba(26, 188, 156,1.0);
-  margin: 0;
-  padding: 0;
-  height: 0.5em;
-  width: 0;
 }
 </style>
 </head>
@@ -333,10 +324,13 @@ The purpose of this exercise is to demonstrate how URL query strings can be used
     <span id="last" class="last dirIcon ion-ios-arrow-left"></span>
     <span id="next" class="next dirIcon ion-ios-arrow-right"></span>
 </nav>
+
+<div id="progress" class="progress navbar-fixed-bottom container">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="Progress: ">
+    <span class="sr-only">0% Complete</span>
   </div>
-    <div id="progressBar" class="container navbar-fixed-bottom">
-      <div id="progress"></div>
-    </div>
+</div>
+    
 <script>
 $(document).ready(function(){
 	
@@ -528,8 +522,12 @@ $( ".jumbotron" ).each(function(index) {
     var progress = '';
     var activeIndex = $('.jumbotron.active').index();
     progress = (100/artLen)*(activeIndex+1);
-    //console.log(progress);  
-    $('#progress').css('width',progress+'%');
+    //console.log(progress); 
+    $('.progress-bar').attr('aria-valuenow',progress); 
+    var progRound = Math.round(progress);
+    $('.progress-bar').find('span').text(progress+'% Complete');
+    $('.progress-bar').css('width',progress+'%');
+    $('.progress-bar').attr('title',activeIndex+1+" of "+artLen);
   }
   
   moveProgress();
