@@ -1,5 +1,11 @@
 var blogs = [ 
   {
+    "title" : "Genius",
+    "url" : "/posts/genius.html",
+    "date":"2/17/16",
+    "category":"web annotation"
+  },
+  {
     "title" : "Web Literacy and #CritLib",
     "url" : "/posts/critlib-webliteracy.html",
     "date":"5/5/15",
