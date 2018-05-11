@@ -1,0 +1,13 @@
+{
+"companyName": "Ectolibrium",
+"productName": "Ectolibrium Episode One",
+"dataUrl": "natesGameWebVR.data.unityweb",
+"asmCodeUrl": "natesGameWebVR.asm.code.unityweb",
+"asmMemoryUrl": "natesGameWebVR.asm.memory.unityweb",
+"asmFrameworkUrl": "natesGameWebVR.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
